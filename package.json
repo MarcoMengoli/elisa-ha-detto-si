@@ -1,0 +1,25 @@
+{
+  "name": "elisa-ha-detto-si",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoMengoli/elisa-ha-detto-si.git"
+  },
+  "keywords": [
+    "elisa",
+    "marco",
+    "wedding"
+  ],
+  "author": "Marco Mengoli",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/MarcoMengoli/elisa-ha-detto-si/issues"
+  },
+  "homepage": "https://github.com/MarcoMengoli/elisa-ha-detto-si#readme"
+}
