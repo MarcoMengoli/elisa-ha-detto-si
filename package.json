@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass -o css scss -w",
+    "watch": "node-sass ./scss -o ./css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/MarcoMengoli/elisa-ha-detto-si/issues"
   },
-  "homepage": "https://github.com/MarcoMengoli/elisa-ha-detto-si#readme"
+  "homepage": "https://github.com/MarcoMengoli/elisa-ha-detto-si#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
 }
