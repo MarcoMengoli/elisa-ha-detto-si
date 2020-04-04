@@ -16,4 +16,4 @@ package-lock.json
 *.sass.map
 *.scss.map
 
-./css
+css/
