@@ -1,10 +1,10 @@
 {
   "name": "elisa-ha-detto-si",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Elisa and Marco's wedding website",
+  "main": "index.html",
   "scripts": {
-    "watch": "node-sass ./scss -o ./css -w",
+    "watch": "sass --watch ./src/scss:./src/css --style expanded",
     "build": "node-sass ./scss -o ./css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +13,9 @@
     "url": "git+https://github.com/MarcoMengoli/elisa-ha-detto-si.git"
   },
   "keywords": [
-    "elisa",
-    "marco",
-    "wedding"
+    "Elisa",
+    "Marco",
+    "Wedding"
   ],
   "author": "Marco Mengoli",
   "license": "LGPL-3.0-or-later",
