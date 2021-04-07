@@ -9,6 +9,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/main.css" />
+        <script src="js/countdown.js"></script>
         <title>Elisa ha detto si</title>
     </head>
     <body>
@@ -26,12 +27,45 @@
         </video>
 
         <header class="viewport-header">
-            <h1>Elisa e Marco</h1>
-            <h2></h2>
+            <div class="container">
+                <h1>Elisa e Marco</h1>
+                <div class="countdown" id="countdown-before">
+                    <ul class="countdown-list">
+                        <li>
+                            <span class="countdown-number" id="cd-days">
+                                23
+                            </span>
+                            <span class="countdown-label">giorni</span>
+                        </li>
+                        <li>
+                            <span class="countdown-number" id="cd-hours">
+                                3
+                            </span>
+                            <span class="countdown-label">ore</span>
+                        </li>
+                        <li>
+                            <span class="countdown-number" id="cd-minutes">
+                                2
+                            </span>
+                            <span class="countdown-label">minuti</span>
+                        </li>
+                        <li>
+                            <span class="countdown-number" id="cd-seconds">
+                                32
+                            </span>
+                            <span class="countdown-label">secondi</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="countdown" id="countdown-after">
+                    <span class="emoji">🎉🎉🎉🎉🎉🎉🎉</span>
+                </div>
+            </div>
         </header>
     </body>
 
     <script>
         document.getElementById("bg-video").playbackRate = 0.5;
+        setCountdown();
     </script>
 </html>
