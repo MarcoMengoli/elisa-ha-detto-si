@@ -4,8 +4,8 @@
   "description": "Elisa and Marco's wedding website",
   "main": "index.html",
   "scripts": {
-    "watch": "sass --watch ./src/scss:./src/css --style expanded",
-    "build": "sass ./src/scss:./src/css --style compressed",
+    "watch": "sass --watch scss:css --style expanded",
+    "build": "sass scss:css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
