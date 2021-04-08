@@ -25,8 +25,8 @@ function setCountdown()
   {    
     if (distance < 0) 
     {
-      var countdownBefore = document.getElementById("countdown-before")
-      var countdownAfter = document.getElementById("countdown-after")
+      var countdownBefore = document.getElementById("countdown-before-datetime")
+      var countdownAfter = document.getElementById("countdown-after-datetime")
 
       countdownBefore.style.display = "none"
       countdownAfter.style.display = "block"

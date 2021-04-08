@@ -13,52 +13,51 @@
         <title>Elisa ha detto si</title>
     </head>
     <body>
-        <video
-            class="background-video"
-            playsinline
-            autoplay
-            muted
-            loop
-            defaultPlaybackRate="0.3"
-            poster="../images/background-backup.jpg"
-            id="bg-video"
-        >
-            <source src="../videos/background-mid.mp4" type="video/mp4" />
-        </video>
-
-        <header class="viewport-header">
+        <header class="viewport">
+            <video
+                class="background-video"
+                playsinline
+                autoplay
+                muted
+                loop
+                defaultPlaybackRate="0.3"
+                poster="../images/background-backup.jpg"
+                id="bg-video"
+            >
+                <source src="../videos/background-mid.mp4" type="video/mp4" />
+            </video>
             <div class="container">
                 <h1>Elisa e Marco</h1>
-                <div class="countdown" id="countdown-before">
-                    <ul class="countdown-list">
-                        <li>
-                            <span class="countdown-number" id="cd-days">
+                <div class="centered-content" id="countdown-before-datetime">
+                    <ul>
+                        <li class="cd-element">
+                            <span class="cd-element-number" id="cd-days">
                                 23
                             </span>
-                            <span class="countdown-label">giorni</span>
+                            <span class="cd-element-label">giorni</span>
                         </li>
-                        <li>
-                            <span class="countdown-number" id="cd-hours">
+                        <li class="cd-element">
+                            <span class="cd-element-number" id="cd-hours">
                                 3
                             </span>
-                            <span class="countdown-label">ore</span>
+                            <span class="cd-element-label">ore</span>
                         </li>
-                        <li>
-                            <span class="countdown-number" id="cd-minutes">
+                        <li class="cd-element">
+                            <span class="cd-element-number" id="cd-minutes">
                                 2
                             </span>
-                            <span class="countdown-label">minuti</span>
+                            <span class="cd-element-label">minuti</span>
                         </li>
-                        <li>
-                            <span class="countdown-number" id="cd-seconds">
+                        <li class="cd-element">
+                            <span class="cd-element-number" id="cd-seconds">
                                 32
                             </span>
-                            <span class="countdown-label">secondi</span>
+                            <span class="cd-element-label">secondi</span>
                         </li>
                     </ul>
                 </div>
-                <div class="countdown" id="countdown-after">
-                    <span class="emoji">🎉🎉🎉🎉🎉🎉🎉</span>
+                <div class="centered-content" id="countdown-after-datetime">
+                    <span>🎉🎉🎉🎉🎉🎉🎉</span>
                 </div>
             </div>
         </header>
