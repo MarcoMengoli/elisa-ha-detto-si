@@ -5,27 +5,46 @@ function setCountdown()
   var hour = minute * 60
   var day = hour * 24
 
-  var target = "Jul 24, 2021 16:00:00"
-  var countdown = new Date(target).getTime()
-  var intervalAction = setInterval(function()
+  var targetDateTime = new Date("Jul 24, 2021 16:00:00").getTime()
+  var intervalRef = undefined
+
+  var calculateDistance = function(target)
   {    
-        var now = new Date().getTime()
-        var distance = countdown - now
+    var now = new Date().getTime()
+    var distance = target - now
 
-        document.getElementById("cd-days").innerText = Math.floor(distance / (day)),
-        document.getElementById("cd-hours").innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById("cd-minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById("cd-seconds").innerText = Math.floor((distance % (minute)) / second);
+    document.getElementById("cd-days").innerText = Math.floor(distance / (day))
+    document.getElementById("cd-hours").innerText = Math.floor((distance % (day)) / (hour))
+    document.getElementById("cd-minutes").innerText = Math.floor((distance % (hour)) / (minute))
+    document.getElementById("cd-seconds").innerText = Math.floor((distance % (minute)) / second)
 
-        if (distance < 0) 
-        {
-          var countdownBefore = document.getElementById("countdown-before")
-          var countdownAfter = document.getElementById("countdown-after")
+    return distance
+  }
 
-          countdownBefore.style.display = "none";
-          countdownAfter.style.display = "block";
+  var setCountdownElements = function(distance, interval)
+  {    
+    if (distance < 0) 
+    {
+      var countdownBefore = document.getElementById("countdown-before")
+      var countdownAfter = document.getElementById("countdown-after")
 
-          clearInterval(intervalAction);
-        }
-      }, 0)
-  };
+      countdownBefore.style.display = "none"
+      countdownAfter.style.display = "block"
+
+      if (interval != undefined)
+        clearInterval(interval);
+    }
+  }
+
+  var calculateAndSet = function(target, interval)
+  {
+    var dist = calculateDistance(target)
+    setCountdownElements(dist, interval)
+  }
+
+  var intervalRef = setInterval(function(){
+    calculateAndSet(targetDateTime, intervalRef)
+  }, 1000)
+
+  calculateAndSet(targetDateTime, intervalRef)
+}
