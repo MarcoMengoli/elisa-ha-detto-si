@@ -1,9 +1,9 @@
 function setCountdown() 
 {
-  var second = 1000
-  var minute = second * 60
-  var hour = minute * 60
-  var day = hour * 24
+  var secondDiv = 1000
+  var minuteDiv = secondDiv * 60
+  var hourDiv = minuteDiv * 60
+  var dayDiv = hourDiv * 24
 
   var targetDateTime = new Date("Jul 24, 2021 16:00:00").getTime()
   var intervalRef = undefined
@@ -13,10 +13,20 @@ function setCountdown()
     var now = new Date().getTime()
     var distance = target - now
 
-    document.getElementById("cd-days").innerText = Math.floor(distance / (day))
-    document.getElementById("cd-hours").innerText = Math.floor((distance % (day)) / (hour))
-    document.getElementById("cd-minutes").innerText = Math.floor((distance % (hour)) / (minute))
-    document.getElementById("cd-seconds").innerText = Math.floor((distance % (minute)) / second)
+    var days = Math.floor(distance / (dayDiv))
+    var hours = Math.floor((distance % (dayDiv)) / (hourDiv))
+    var minutes = Math.floor((distance % (hourDiv)) / (minuteDiv))
+    var seconds = Math.floor((distance % (minuteDiv)) / secondDiv)
+
+    document.getElementById("cd-days-number").innerText = days
+    document.getElementById("cd-hours-number").innerText = hours
+    document.getElementById("cd-minutes-number").innerText = minutes
+    document.getElementById("cd-seconds-number").innerText = seconds
+
+    document.getElementById("cd-days-label").innerText = "giorn" + (days != 1 ? "i" : "o")
+    document.getElementById("cd-hours-label").innerText = "or" + (hours != 1 ? "e" : "a")
+    document.getElementById("cd-minutes-label").innerText = "minut" + (minutes != 1 ? "i" : "o")
+    document.getElementById("cd-seconds-label").innerText = "second" + (seconds != 1 ? "i" : "o")
 
     return distance
   }
