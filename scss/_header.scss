@@ -3,11 +3,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    @extend %fullSpace;
 }
 
 .viewport {
-    @extend %fullSpace;
+    @extend %viewPort;
 }
 
 h1 {
