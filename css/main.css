@@ -1,4 +1,4 @@
-.background-video, .header-container {
+.background-video, #header-container {
   width: 100%;
   height: 100%;
   top: 0;
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 
-.countdown .cd-element, .header-container {
+.countdown .cd-element, #header-container {
   display: flex;
   flex-direction: column;
   align-items: center;

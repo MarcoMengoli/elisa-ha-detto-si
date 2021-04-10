@@ -1,10 +1,10 @@
-.header-container {
-    @extend %flexColumnCentered;
-    @extend %fullSpace;
-}
-
 .viewport {
     @extend %viewPort;
+}
+
+#header-container {
+    @extend %flexColumnCentered;
+    @extend %fullSpace;
 }
 
 h1 {
