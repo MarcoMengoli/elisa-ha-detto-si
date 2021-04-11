@@ -923,7 +923,7 @@ body {
 
 .adaptable-viewport {
   width: 100vw;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .overlayered-container {
