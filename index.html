@@ -22,58 +22,66 @@
                 <div class="heart expand delay-p12"></div>
             </div>
         </div>
-        <header class="full-viewport">
-            <video
-                class="background-video"
-                playsinline
-                autoplay
-                muted
-                loop
-                defaultPlaybackRate="0.3"
-                poster="images/background-backup.jpg"
-                id="bg-video"
-            >
-                <source src="videos/background-mid.mp4" type="video/mp4" />
-            </video>
-            <div id="header-container">
-                <h1 id="main-title">Elisa e Marco</h1>
-                <div class="countdown" id="countdown-before-datetime">
-                    <div class="cd-element">
-                        <div class="cd-element-number" id="cd-days-number">
-                            23
+        <header class="full-viewport" id="header">
+            <div class="overlayered-container">
+                <div id="header-container">
+                    <h1 id="main-title">Elisa e Marco</h1>
+                    <div class="countdown" id="countdown-before-datetime">
+                        <div class="cd-element">
+                            <div class="cd-element-number" id="cd-days-number">
+                                23
+                            </div>
+                            <div class="cd-element-label" id="cd-days-label">
+                                giorni
+                            </div>
                         </div>
-                        <div class="cd-element-label" id="cd-days-label">
-                            giorni
+                        <div class="cd-element">
+                            <div class="cd-element-number" id="cd-hours-number">
+                                3
+                            </div>
+                            <div class="cd-element-label" id="cd-hours-label">
+                                ore
+                            </div>
+                        </div>
+                        <div class="cd-element">
+                            <div
+                                class="cd-element-number"
+                                id="cd-minutes-number"
+                            >
+                                2
+                            </div>
+                            <div class="cd-element-label" id="cd-minutes-label">
+                                minuti
+                            </div>
+                        </div>
+                        <div class="cd-element">
+                            <div
+                                class="cd-element-number"
+                                id="cd-seconds-number"
+                            >
+                                32
+                            </div>
+                            <div class="cd-element-label" id="cd-seconds-label">
+                                secondi
+                            </div>
                         </div>
                     </div>
-                    <div class="cd-element">
-                        <div class="cd-element-number" id="cd-hours-number">
-                            3
-                        </div>
-                        <div class="cd-element-label" id="cd-hours-label">
-                            ore
-                        </div>
-                    </div>
-                    <div class="cd-element">
-                        <div class="cd-element-number" id="cd-minutes-number">
-                            2
-                        </div>
-                        <div class="cd-element-label" id="cd-minutes-label">
-                            minuti
-                        </div>
-                    </div>
-                    <div class="cd-element">
-                        <div class="cd-element-number" id="cd-seconds-number">
-                            32
-                        </div>
-                        <div class="cd-element-label" id="cd-seconds-label">
-                            secondi
-                        </div>
+                    <div id="countdown-after-datetime">
+                        <span>🎉🎉🎉🎉🎉🎉🎉</span>
                     </div>
                 </div>
-                <div id="countdown-after-datetime">
-                    <span>🎉🎉🎉🎉🎉🎉🎉</span>
-                </div>
+                <video
+                    class="background-video"
+                    playsinline
+                    autoplay
+                    muted
+                    loop
+                    defaultPlaybackRate="0.3"
+                    poster="images/background-backup.jpg"
+                    id="bg-video"
+                >
+                    <source src="videos/background-mid.mp4" type="video/mp4" />
+                </video>
             </div>
         </header>
         <section class="adaptable-viewport">
@@ -111,7 +119,7 @@
         setCountdown();
         var backgroundVideo = document.getElementById("bg-video");
         var loader = document.getElementById("loader");
-        var header = document.getElementById("header-container");
+        var header = document.getElementById("header");
         var title = document.getElementById("main-title");
         backgroundVideo.playbackRate = 0.5;
 
@@ -121,7 +129,8 @@
 
             var opacity = Math.max(0, currentScroll / (0.5 * headerHeight));
 
-            header.style.backgroundColor = "rgba(1,1,1," + 0.6 * opacity + ")";
+            backgroundVideo.style.opacity = 1 - 0.6 * opacity;
+            // header.style.backgroundColor = "rgba(1,1,1," + 0.6 * opacity + ")";
         });
     </script>
 </html>

@@ -12,7 +12,7 @@ html {
     //         rgba(252, 70, 107, 0.3) 100%
     //     ),
     //     url("../images/background-backup.jpg");
-    background-color: rgba(252, 70, 107, 0.3);
+    background-color: $color-background;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,6 +30,12 @@ body {
 
 .adaptable-viewport {
     @extend %adaptable-viewport;
+}
+
+.overlayered-container {
+    display: grid;
+    grid-template-columns: 1fr 40fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .container {
