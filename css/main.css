@@ -753,6 +753,10 @@ figure .us-sparkle {
   animation: sparkle-move 60s linear infinite;
 }
 
+.pulsing-hearts-wrapper .heart::before, .pulsing-hearts-wrapper .heart::after {
+  background-color: #f7af9d;
+}
+
 @-webkit-keyframes sparkle-move {
   0% {
     background-position: 0 0px, 0 0px, 0 0;
@@ -793,11 +797,11 @@ figure .us-sparkle {
     background-position: -500px -1000px, -400px -400px, 300px 300px;
   }
 }
-.hearts-wrapper {
+.pulsing-hearts-wrapper {
   width: 50px;
   height: 50px;
 }
-.hearts-wrapper > * {
+.pulsing-hearts-wrapper > * {
   opacity: 0.5;
 }
 
