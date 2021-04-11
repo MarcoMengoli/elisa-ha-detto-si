@@ -51,7 +51,7 @@ h3 {
     font-family: $font-countdown;
     text-align: center;
 
-    margin: 1.5em 0;
+    margin: 3em 0 2em 0;
 
     @extend %flex-row-centered;
 
@@ -63,7 +63,7 @@ h3 {
     .cd-element {
         text-transform: uppercase;
         padding: 0 1.2em;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
         font-size: 1em;
         font-weight: 500;
         width: 7em;

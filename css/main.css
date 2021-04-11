@@ -856,7 +856,7 @@ h3 {
   font-size: 1.1em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   text-align: center;
-  margin: 1.5em 0;
+  margin: 3em 0 2em 0;
 }
 @media (max-width: 500px) {
   .countdown {
@@ -867,7 +867,7 @@ h3 {
 .countdown .cd-element {
   text-transform: uppercase;
   padding: 0 1.2em;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
   font-weight: 500;
   width: 7em;
