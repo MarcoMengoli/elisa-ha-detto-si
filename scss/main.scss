@@ -4,6 +4,7 @@
 @import "loader";
 @import "header";
 @import "us";
+@import "date";
 
 html {
     // background: radial-gradient(
@@ -24,12 +25,15 @@ body {
 }
 
 .full-viewport {
-    @extend %full-viewport;
+    width: 100vw;
+    height: 100vh;
     @extend %flex-stretch;
 }
 
 .adaptable-viewport {
-    @extend %adaptable-viewport;
+    width: 100vw;
+    min-height: 60vh;
+    @extend %display-flex;
 }
 
 .overlayered-container {
@@ -47,6 +51,15 @@ body {
     }
 }
 
+.vertical-container {
+    @extend %flex-column-centered;
+    width: 100%;
+}
+
 .light-bg {
     background-color: $color-background-lighter;
+}
+
+.dark-bg {
+    background-color: $color-background-darker;
 }

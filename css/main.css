@@ -5,17 +5,7 @@
   left: 0;
 }
 
-.full-viewport {
-  width: 100vw;
-  height: 100vh;
-}
-
-.adaptable-viewport {
-  width: 100vw;
-  min-height: 60vh;
-}
-
-.countdown .cd-element, #header-container, .container, .countdown, .full-viewport, .adaptable-viewport {
+.adaptable-viewport, .vertical-container, .countdown .cd-element, #header-container, .container, .countdown, .full-viewport {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -35,7 +25,7 @@
   justify-content: center;
 }
 
-.countdown .cd-element, #header-container {
+.vertical-container, .countdown .cd-element, #header-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -641,6 +631,7 @@ h1 {
   color: #ffffff;
   font-size: 7em;
   margin: 0 auto;
+  text-shadow: 0.01em 0.01em 0.03em rgba(0, 0, 0, 0.8);
 }
 @media (max-width: 900px) {
   h1 {
@@ -659,56 +650,6 @@ h1 {
   z-index: -1;
   grid-row: 1/4;
   grid-column: 1/4;
-}
-
-.countdown {
-  color: #ffffff;
-  font-size: 1.1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  text-align: center;
-}
-@media (max-width: 500px) {
-  .countdown {
-    flex-direction: column;
-  }
-}
-.countdown .cd-element {
-  text-transform: uppercase;
-  padding: 0 1.2em;
-  background-color: rgba(0, 0, 0, 0.35);
-  width: 3em;
-  border-radius: 4em;
-  font-size: 1em;
-  margin: 0 0.2em;
-}
-@media (max-width: 900px) {
-  .countdown .cd-element {
-    width: 3em;
-    border-radius: 3em;
-    font-size: 0.9em;
-  }
-}
-@media (max-width: 500px) {
-  .countdown .cd-element {
-    margin: 0.5em auto;
-    width: 3em;
-    border-radius: 3em;
-    font-size: 0.9em;
-  }
-}
-.countdown .cd-element-number {
-  font-size: 2em;
-}
-.countdown .cd-element-label {
-  font-size: 0.6em;
-  padding-bottom: 0.7em;
-}
-
-#countdown-after-datetime {
-  display: none;
-  font-size: 2em;
-  padding: 0 0.25rem;
-  letter-spacing: 0.5em;
 }
 
 figure {
@@ -858,6 +799,111 @@ figure .us-sparkle {
     transform: scale(1);
   }
 }
+.photo-1-bg {
+  background-image: url("../images/background-backup.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Allura", cursive;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 2em 0 0 0;
+  font-size: 4em;
+  text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 900px) {
+  h2 {
+    margin-top: 3em;
+    font-size: 3em;
+    text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.8);
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  margin: -0.2em 0 0 0;
+  font-size: 1.3em;
+  text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 900px) {
+  h3 {
+    font-size: 1em;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 0.8em;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.countdown {
+  color: #ffffff;
+  font-size: 1.1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 1.5em 0;
+}
+@media (max-width: 500px) {
+  .countdown {
+    flex-direction: column;
+    margin: 2.5em 0 4em 0;
+  }
+}
+.countdown .cd-element {
+  text-transform: uppercase;
+  padding: 0 1.2em;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1em;
+  font-weight: 500;
+  width: 7em;
+  height: 7em;
+  margin: 0 0.6em;
+}
+@media (max-width: 900px) {
+  .countdown .cd-element {
+    width: 5em;
+    height: 5em;
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 500px) {
+  .countdown .cd-element {
+    margin: 0.5em auto;
+    width: 5em;
+    height: 5em;
+    font-size: 0.6em;
+  }
+}
+.countdown .cd-element-number {
+  font-size: 2.4em;
+}
+.countdown .cd-element-label {
+  font-size: 0.8em;
+  padding-bottom: 0.7em;
+}
+
+#countdown-after-datetime {
+  display: none;
+  font-size: 2em;
+  padding: 0 0.25rem;
+  letter-spacing: 0.5em;
+}
+
 html {
   background-color: #f7af9d;
   background-position: center;
@@ -868,6 +914,16 @@ html {
 
 body {
   margin: 0;
+}
+
+.full-viewport {
+  width: 100vw;
+  height: 100vh;
+}
+
+.adaptable-viewport {
+  width: 100vw;
+  min-height: 60vh;
 }
 
 .overlayered-container {
@@ -885,8 +941,16 @@ body {
   }
 }
 
+.vertical-container {
+  width: 100%;
+}
+
 .light-bg {
   background-color: #ffffff;
+}
+
+.dark-bg {
+  background-color: #fae1dd;
 }
 
 /*# sourceMappingURL=main.css.map */

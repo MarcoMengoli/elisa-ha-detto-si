@@ -1,3 +1,12 @@
+function padZero(value)
+{
+  if(value < 9)
+    return "0" + value
+
+  return "" + value
+
+}
+
 function setCountdown() 
 {
   var secondDiv = 1000
@@ -13,15 +22,15 @@ function setCountdown()
     var now = new Date().getTime()
     var distance = target - now
 
-    var days = Math.floor(distance / (dayDiv))
-    var hours = Math.floor((distance % (dayDiv)) / (hourDiv))
-    var minutes = Math.floor((distance % (hourDiv)) / (minuteDiv))
-    var seconds = Math.floor((distance % (minuteDiv)) / secondDiv)
+    var days = Math.max(0, Math.floor(distance / dayDiv))
+    var hours = Math.max(0, Math.floor((distance % (dayDiv)) / hourDiv))
+    var minutes = Math.max(0, Math.floor((distance % (hourDiv)) / minuteDiv))
+    var seconds = Math.max(0, Math.floor((distance % (minuteDiv)) / secondDiv))
 
-    document.getElementById("cd-days-number").innerText = days
-    document.getElementById("cd-hours-number").innerText = hours
-    document.getElementById("cd-minutes-number").innerText = minutes
-    document.getElementById("cd-seconds-number").innerText = seconds
+    document.getElementById("cd-days-number").innerText = padZero(days)
+    document.getElementById("cd-hours-number").innerText = padZero(hours)
+    document.getElementById("cd-minutes-number").innerText = padZero(minutes)
+    document.getElementById("cd-seconds-number").innerText = padZero(seconds)
 
     document.getElementById("cd-days-label").innerText = "giorn" + (days != 1 ? "i" : "o")
     document.getElementById("cd-hours-label").innerText = "or" + (hours != 1 ? "e" : "a")
@@ -35,11 +44,11 @@ function setCountdown()
   {    
     if (distance < 0) 
     {
-      var countdownBefore = document.getElementById("countdown-before-datetime")
-      var countdownAfter = document.getElementById("countdown-after-datetime")
+      // var countdownBefore = document.getElementById("countdown-before-datetime")
+      // var countdownAfter = document.getElementById("countdown-after-datetime")
 
-      countdownBefore.style.display = "none"
-      countdownAfter.style.display = "block"
+      // countdownBefore.style.display = "none"
+      // countdownAfter.style.display = "block"
 
       if (interval != undefined)
         clearInterval(interval);

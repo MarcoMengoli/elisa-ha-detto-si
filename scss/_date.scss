@@ -1,0 +1,104 @@
+.photo-1-bg {
+    background-image: url("../images/background-backup.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-family: $font-title;
+    font-weight: 500;
+    color: $color-font-primary;
+    margin: 2em 0 0 0;
+    font-size: 4em;
+    text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 900px) {
+        margin-top: 3em;
+        font-size: 3em;
+        text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.8);
+    }
+    @media (max-width: 500px) {
+        font-size: 2em;
+    }
+}
+
+h3 {
+    text-align: center;
+    font-family: $font-countdown;
+    font-weight: 300;
+    color: $color-font-primary;
+
+    margin: -0.2em 0 0 0;
+    font-size: 1.3em;
+    text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
+
+    @media (max-width: 900px) {
+        font-size: 1em;
+        margin-bottom: 1rem;
+    }
+    @media (max-width: 500px) {
+        font-size: 0.8em;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.countdown {
+    color: $color-font-primary;
+    font-size: 1.1em;
+    font-family: $font-countdown;
+    text-align: center;
+
+    margin: 1.5em 0;
+
+    @extend %flex-row-centered;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        margin: 2.5em 0 4em 0;
+    }
+
+    .cd-element {
+        text-transform: uppercase;
+        padding: 0 1.2em;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-size: 1em;
+        font-weight: 500;
+        width: 7em;
+        height: 7em;
+        margin: 0 0.6em;
+        @extend %flex-column-centered;
+
+        @media (max-width: 900px) {
+            width: 5em;
+            height: 5em;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 500px) {
+            margin: 0.5em auto;
+
+            width: 5em;
+            height: 5em;
+            font-size: 0.6em;
+        }
+
+        &-number {
+            font-size: 2.4em;
+        }
+
+        &-label {
+            font-size: 0.8em;
+            padding-bottom: 0.7em;
+        }
+    }
+}
+
+#countdown-after-datetime {
+    display: none;
+    font-size: 2em;
+    padding: 0 0.25rem;
+    letter-spacing: 0.5em;
+}
