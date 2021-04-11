@@ -1,0 +1,155 @@
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    figcaption {
+        display: none;
+    }
+
+    .rounded-image {
+        width: 20em;
+        border-radius: 50%;
+        margin: 4em;
+
+        @media (max-width: 900px) {
+            width: 15em;
+            margin: 3em;
+        }
+
+        @media (max-width: 500px) {
+            width: 10em;
+            margin: 2em;
+        }
+    }
+
+    .us-sparkle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        background-image: url(../images/sparkle-1.png),
+            url(../images/sparkle-2.png);
+        -webkit-animation: sparkle-move 60s linear infinite;
+        animation: sparkle-move 60s linear infinite;
+    }
+}
+
+@-webkit-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -200px -400px, 300px 300px;
+    }
+}
+@-moz-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@-o-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@-ms-keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+@keyframes sparkle-move {
+    0% {
+        background-position: 0 0px, 0 0px, 0 0;
+    }
+    100% {
+        background-position: -500px -1000px, -400px -400px, 300px 300px;
+    }
+}
+
+.hearts-wrapper {
+    width: 50px;
+    height: 50px;
+
+    & > * {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    -moz-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+    0%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0%,
+    100% {
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes pulse {
+    0%,
+    100% {
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-ms-keyframes pulse {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}

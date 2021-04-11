@@ -1,5 +1,3 @@
-$color-font-primary: #ffffff;
-
 // https://coolors.co/fec5bb-fcd5ce-fae1dd-f8edeb-e8e8e4-d8e2dc-ece4db-ffe5d9-ffd7ba-fec89a
 $color-peachpalette-1: #fec5bb; // Melon
 $color-peachpalette-2: #fcd5ce; // Pale pink
@@ -33,6 +31,11 @@ $color-pucepalette-3: #b0d0d3; // Light blue
 $color-pucepalette-4: #c08497; // Puce
 $color-pucepalette-5: #f7af9d; // Melon
 
+$color-font-primary: #ffffff;
+
+$color-background-lighter: #ffffff;
+$color-background-darker: $color-peachpalette-3;
+
 $font-title: "Allura", cursive;
 $font-countdown: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -44,20 +47,41 @@ $font-countdown: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     left: 0;
 }
 
-%viewPort {
+%full-viewport {
     width: 100vw;
     height: 100vh;
 }
 
-%flexRowCentered {
+%adaptable-viewport {
+    width: 100vw;
+    min-height: 60vh;
+    @extend %display-flex;
+}
+
+%display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+}
+
+%flex-stretch {
+    @extend %display-flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+%flex-row-centered {
+    @extend %display-flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-%flexColumnCentered {
-    display: flex;
+%flex-column-centered {
+    @extend %display-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;

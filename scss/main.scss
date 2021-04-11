@@ -1,6 +1,9 @@
 @import "variables";
+@import "effects";
+@import "components";
 @import "loader";
 @import "header";
+@import "us";
 
 html {
     // background: radial-gradient(
@@ -18,4 +21,26 @@ html {
 
 body {
     margin: 0;
+}
+
+.full-viewport {
+    @extend %full-viewport;
+    @extend %flex-stretch;
+}
+
+.adaptable-viewport {
+    @extend %adaptable-viewport;
+}
+
+.container {
+    @extend %flex-row-centered;
+    width: 100%;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.light-bg {
+    background-color: $color-background-lighter;
 }

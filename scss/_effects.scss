@@ -1,0 +1,25 @@
+@function pad-zeroes($number) {
+    @if ($number < 10) {
+        @return "0#{$number}";
+    }
+
+    @return "#{$number}";
+}
+
+@for $i from 0 through 30 {
+    $time: #{$i/10}s;
+
+    .delay-p#{pad-zeroes($i)} {
+        -webkit-animation-delay: $time !important;
+        -moz-animation-delay: $time !important;
+        -o-animation-delay: $time !important;
+        animation-delay: $time !important;
+    }
+
+    .delay-m#{pad-zeroes($i)} {
+        -webkit-animation-delay: -$time !important;
+        -moz-animation-delay: -$time !important;
+        -o-animation-delay: -$time !important;
+        animation-delay: -$time !important;
+    }
+}

@@ -15,14 +15,14 @@
     <body>
         <div id="loader">
             <div class="loader-wrapper">
-                <div class="heart" id="heart1"></div>
-                <div class="heart" id="heart2"></div>
-                <div class="heart" id="heart3"></div>
-                <div class="heart" id="heart4"></div>
-                <div class="heart" id="heart5"></div>
+                <div class="heart expand delay-p00"></div>
+                <div class="heart expand delay-p03"></div>
+                <div class="heart expand delay-p06"></div>
+                <div class="heart expand delay-p09"></div>
+                <div class="heart expand delay-p12"></div>
             </div>
         </div>
-        <header class="viewport">
+        <header class="full-viewport">
             <video
                 class="background-video"
                 playsinline
@@ -76,17 +76,44 @@
                 </div>
             </div>
         </header>
-        <section></section>
+        <section class="adaptable-viewport">
+            <div class="container light-bg">
+                <figure>
+                    <span class="us-sparkle"></span>
+                    <img
+                        src="images/Elisa.jpg"
+                        alt="Elisa"
+                        class="rounded-image"
+                    />
+                    <figcaption>Elisa</figcaption>
+                </figure>
+                <div class="hearts-wrapper">
+                    <div class="heart pulse delay-m00"></div>
+                    <div class="heart pulse delay-m07"></div>
+                    <div class="heart pulse delay-m11"></div>
+                    <div class="heart pulse delay-m17"></div>
+                </div>
+                <figure>
+                    <span class="us-sparkle"></span>
+                    <img
+                        src="images/Marco.jpg"
+                        alt="Marco"
+                        class="rounded-image"
+                    />
+                    <figcaption>Marco</figcaption>
+                </figure>
+            </div>
+        </section>
     </body>
 
     <script>
         document.getElementById("bg-video").playbackRate = 0.5;
         setCountdown();
         var backgroundVideo = document.getElementById("bg-video");
+        var loader = document.getElementById("loader");
         var header = document.getElementById("header-container");
         var title = document.getElementById("main-title");
         backgroundVideo.playbackRate = 0.5;
-        setCountdown();
 
         window.addEventListener("scroll", function () {
             var currentScroll = window.scrollY;
@@ -94,7 +121,7 @@
 
             var opacity = Math.max(0, currentScroll / (0.5 * headerHeight));
 
-            header.style.backgroundColor = "rgba(1,1,1," + 0.7 * opacity + ")";
+            header.style.backgroundColor = "rgba(1,1,1," + 0.6 * opacity + ")";
         });
     </script>
 </html>

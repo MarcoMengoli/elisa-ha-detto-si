@@ -1,9 +1,5 @@
-.viewport {
-    @extend %viewPort;
-}
-
 #header-container {
-    @extend %flexColumnCentered;
+    @extend %flex-column-centered;
     @extend %fullSpace;
 }
 
@@ -37,7 +33,7 @@ h1 {
     font-size: 1.1em;
     font-family: $font-countdown;
     text-align: center;
-    @extend %flexRowCentered;
+    @extend %flex-row-centered;
 
     @media (max-width: 500px) {
         flex-direction: column;
@@ -51,7 +47,7 @@ h1 {
         border-radius: 4em;
         font-size: 1em;
         margin: 0 0.2em;
-        @extend %flexColumnCentered;
+        @extend %flex-column-centered;
 
         @media (max-width: 900px) {
             width: 3em;
