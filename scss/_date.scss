@@ -102,3 +102,31 @@ h3 {
     padding: 0 0.25rem;
     letter-spacing: 0.5em;
 }
+
+.parallax {
+    background-size: 120% auto;
+
+    @media (orientation: portrait) {
+        background-size: auto 120%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+
+    -webkit-transition: opacity 0s ease-in;
+    -moz-transition: opacity 0s ease-in;
+    -o-transition: opacity 0s ease-in;
+    -ms-transition: opacity 0s ease-in;
+    transition: opacity 0s ease-in;
+
+    &.active {
+        opacity: 1;
+
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+}

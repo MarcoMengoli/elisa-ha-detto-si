@@ -6,7 +6,7 @@
     @return "#{$number}";
 }
 
-@for $i from 0 through 30 {
+@for $i from 0 through 99 {
     $time: #{$i/10}s;
 
     .delay-p#{pad-zeroes($i)} {
@@ -14,6 +14,11 @@
         -moz-animation-delay: $time !important;
         -o-animation-delay: $time !important;
         animation-delay: $time !important;
+
+        -webkit-transition-delay: $time !important;
+        -moz-transition-delay: $time !important;
+        -o-transition-delay: $time !important;
+        transition-delay: $time !important;
     }
 
     .delay-m#{pad-zeroes($i)} {
@@ -21,5 +26,10 @@
         -moz-animation-delay: -$time !important;
         -o-animation-delay: -$time !important;
         animation-delay: -$time !important;
+
+        -webkit-transition-delay: -$time !important;
+        -moz-transition-delay: -$time !important;
+        -o-transition-delay: -$time !important;
+        transition-delay: -$time !important;
     }
 }
