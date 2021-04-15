@@ -1,6 +1,5 @@
 @import "variables";
 @import "effects";
-@import "components";
 @import "loader";
 @import "header";
 @import "us";
@@ -64,4 +63,13 @@ body {
 
 .dark-bg {
     background-color: $color-background-darker;
+}
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    .fa-heart {
+        color: $color-peachpalette-10;
+    }
 }

@@ -1,11 +1,4 @@
 .us-container {
-    // width: 80%;
-    // height: 80%;
-    // -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
-    // -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
-    // box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
-    // @extend %flex-row-centered;
-
     display: grid;
     grid-template-columns: 2fr 10fr 15fr 10fr 2fr;
     grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
@@ -187,13 +180,10 @@ figure {
     }
 }
 
-.pulsing-hearts-wrapper {
-    .heart {
-        &::before,
-        &::after {
-            background-color: $color-background;
-        }
-    }
+.us-heart {
+    position: absolute;
+    font-size: 3em;
+    color: $color-background;
 }
 
 @-webkit-keyframes sparkle-move {
@@ -247,63 +237,23 @@ figure {
 }
 
 .pulse {
-    -moz-animation: pulse 3s infinite ease-in-out;
-    -o-animation: pulse 3s infinite ease-in-out;
-    -webkit-animation: pulse 3s infinite ease-in-out;
-    animation: pulse 3s infinite ease-in-out;
-}
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -o-animation-name: pulse;
+    animation-name: pulse;
 
-@-webkit-keyframes pulse {
-    0%,
-    100% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-    50% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
 
-@-moz-keyframes pulse {
-    0%,
-    100% {
-        -moz-transform: scale(0);
-        transform: scale(0);
-    }
-    50% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
 
-@-o-keyframes pulse {
-    0%,
-    100% {
-        -o-transform: scale(0);
-        transform: scale(0);
-    }
-    50% {
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-ms-keyframes pulse {
-    0%,
-    100% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
-}
-@keyframes pulse {
-    0%,
-    100% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
