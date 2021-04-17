@@ -4,9 +4,9 @@
         font-family: $font-title;
         font-weight: 500;
         color: $color-font-primary;
-        font-size: 4em;
+        font-size: 6em;
         text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
-        margin: 2em 0;
+        margin: 1.3em 0 0.5em 0;
 
         @media (max-width: 900px) {
             font-size: 3em;
@@ -40,8 +40,8 @@
 }
 
 .squared-box {
-    width: 20em;
-    height: 20em;
+    width: 20vw;
+    height: 20vw;
     text-align: center;
     background-color: transparent;
     color: $color-font-text;
@@ -56,7 +56,7 @@
     transition: all 0.3s ease;
 
     .icon {
-        font-size: 5em;
+        font-size: 4em;
         color: $color-background-lighter;
         margin-top: 20%;
 
@@ -108,17 +108,17 @@
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.8);
-        border-color: $color-background;
+        border-color: $color-font-details-title;
 
         .icon {
             margin-top: -10%;
-            color: $color-background;
+            color: $color-font-details-title;
         }
 
         .title {
             margin-top: 5%;
             margin-bottom: 15%;
-            color: $color-background;
+            color: $color-font-details-title;
 
             -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
             -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
