@@ -1,9 +1,11 @@
 @import "variables";
 @import "effects";
+@import "backgrounds";
 @import "loader";
 @import "header";
 @import "us";
 @import "date";
+@import "components";
 @import "maps";
 
 html {
@@ -27,12 +29,18 @@ body {
 .full-viewport {
     width: 100vw;
     height: 100vh;
-    @extend %flex-stretch;
+    @extend %flex-row-centered;
+    @extend %flex-stretched;
 }
 
 .adaptable-viewport {
     width: 100vw;
     min-height: 70vh;
+    @extend %display-flex;
+}
+
+.min-viewport {
+    width: 100vw;
     @extend %display-flex;
 }
 
@@ -50,11 +58,25 @@ body {
     @media (max-width: 900px) {
         flex-direction: column;
     }
+
+    &.stretched {
+        @extend %flex-stretched;
+    }
+    &.spaced {
+        @extend %flex-spaced;
+    }
 }
 
 .vertical-container {
     @extend %flex-column-centered;
     width: 100%;
+
+    &.stretched {
+        @extend %flex-stretched;
+    }
+    &.spaced {
+        @extend %flex-spaced;
+    }
 }
 
 .light-bg {

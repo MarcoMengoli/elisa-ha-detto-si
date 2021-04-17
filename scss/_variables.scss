@@ -58,13 +58,6 @@ $font-countdown: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     display: flex;
 }
 
-%flex-stretch {
-    @extend %display-flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: stretch;
-}
-
 %flex-row-centered {
     @extend %display-flex;
     flex-direction: row;
@@ -77,4 +70,14 @@ $font-countdown: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+%flex-stretched {
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+%flex-spaced {
+    align-items: space-evenly;
+    justify-content: space-evenly;
 }
