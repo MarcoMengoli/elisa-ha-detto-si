@@ -1,18 +1,24 @@
+.save-the-date {
+    width: 50vh;
+
+    @media (orientation: portrait) {
+        width: 70%;
+    }
+}
+
 .detail-container {
     h2 {
+        color: $color-font-primary;
+        font-size: 5em;
+        text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
         text-align: center;
         font-family: $font-title;
         font-weight: 500;
-        color: $color-background;
         font-size: 6em;
         margin: 1.3em 0 0.5em 0;
 
-        @media (max-width: 900px) {
-            font-size: 3em;
-            text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.8);
-        }
-        @media (max-width: 500px) {
-            font-size: 2em;
+        @media (orientation: portrait) {
+            font-size: 4em;
         }
     }
 
@@ -39,19 +45,12 @@
 }
 
 .squared-box {
-    width: 20vw;
+    width: 25vw;
     height: 20vw;
     text-align: center;
-    background-color: $color-background-lighter;
-    color: $color-font-text;
-    // border: 1px solid $color-font-details-title;
 
-    -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
-    -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
-    box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
-
-    position: relative;
-    display: block;
+    color: $color-background-lighter;
+    background-color: rgba(0, 0, 0, 0.5);
 
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -59,11 +58,10 @@
     transition: all 0.3s ease;
 
     .icon {
-        font-size: 4em;
-        color: $color-font-details-title;
+        font-size: 3em;
         margin-top: 20%;
-        background-color: $color-background-lighter;
 
+        color: $color-background-lighter;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -71,8 +69,10 @@
     }
 
     .title {
-        margin-top: 20%;
-        color: $color-font-details-title;
+        color: $color-background-lighter;
+        margin-top: 10%;
+        font-size: 1.5em;
+        font-weight: 400;
         -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -108,21 +108,76 @@
                 font-size: 0.8em;
             }
         }
+
+        .parking-btn {
+            border: 0px solid $color-font-details-title;
+            border-radius: 0.5em 0.5em;
+            background-color: $color-background-lighter;
+            margin: 0.4em 0;
+            transition: all 0.4s;
+            width: 80%;
+            padding: 0;
+            overflow: hidden;
+
+            .parking-link {
+                outline: none;
+                cursor: pointer;
+                @extend %flex-row-centered;
+                align-items: center;
+                justify-content: space-between;
+                text-decoration: none;
+                color: $color-font-text;
+
+                & > * {
+                    padding: 0.5em 0;
+                }
+            }
+
+            .link-icon {
+                font-size: 1.3em;
+                vertical-align: bottom;
+                margin: 0 0.3em;
+            }
+
+            .place {
+                justify-content: flex-start;
+            }
+
+            .distance {
+                justify-content: flex-end;
+                flex-basis: 4em;
+                background-color: $color-background;
+                color: $color-background-lighter;
+                width: 100%;
+                height: 100%;
+                font-size: 1em;
+
+                .link-icon {
+                    margin: 0;
+                }
+            }
+
+            &:hover {
+                .parking-link {
+                    background-color: $color-background;
+                    color: $color-background-lighter;
+                }
+                .distance {
+                    margin-right: 0.5em;
+                }
+            }
+        }
     }
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.8);
         border-color: $color-font-details-title;
 
         .icon {
-            margin-top: -10%;
-            color: $color-font-details-title;
+            margin-top: 2%;
         }
 
         .title {
-            margin-top: 5%;
-            margin-bottom: 15%;
-            color: $color-font-details-title;
+            margin-top: 0%;
 
             -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
             -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -145,58 +200,45 @@
             transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
         }
     }
+
+    @media (orientation: portrait) {
+        width: 70vw;
+        height: 50vw;
+        margin: 0.5em auto;
+
+        .icon {
+            font-size: 2em;
+            margin-top: 5%;
+        }
+
+        .title {
+            font-size: 1em;
+            margin-top: 0%;
+        }
+
+        .description {
+            opacity: 1;
+            transform: scale(1);
+
+            .desc-line {
+                margin-top: 0.2em;
+                font-size: 0.8em;
+                font-family: $font-countdown;
+                padding-top: 0.6em;
+            }
+
+            .parking-btn {
+                margin: 0.2em 0;
+
+                .parking-link > * {
+                    padding: 0.3em 0;
+                }
+            }
+        }
+    }
 }
 
-.parking-btn {
-    border: 1px solid $color-font-details-title;
-    border-radius: 0.5em 0.5em;
-    background-color: $color-background-lighter;
-    margin: 0.2em 0;
-    transition: all 0.4s;
-    width: 80%;
-    padding: 0;
-    overflow: hidden;
-
-    .parking-link {
-        outline: none;
-        cursor: pointer;
-        @extend %flex-row-centered;
-        align-items: center;
-        justify-content: space-between;
-        text-decoration: none;
-        color: $color-font-details-title;
-
-        & > * {
-            padding: 0.5em 0;
-        }
-    }
-
-    .place {
-        justify-content: flex-start;
-        padding-left: 0.5em;
-    }
-
-    .distance {
-        justify-content: flex-end;
-        flex-basis: 4em;
-        background-color: $color-font-details-title;
-        color: $color-background-lighter;
-        width: 100%;
-        height: 100%;
-
-        i {
-            font-size: 1em;
-        }
-    }
-
-    &:hover {
-        .parking-link {
-            background-color: $color-font-details-title;
-            color: $color-background-lighter;
-        }
-        .distance {
-            background-color: $color-background-lighter;
-            color: $color-font-details-title;
-        }
-    }
+.map {
+    width: 100%;
+    height: 40vh;
 }
