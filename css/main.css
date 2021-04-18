@@ -2758,6 +2758,7 @@ h1 {
   justify-self: center;
   text-align: center;
   z-index: 5;
+  margin: 0 3em;
 }
 .avatar-left {
   grid-column: 2/3;
@@ -2798,7 +2799,8 @@ figure figcaption {
   }
 }
 figure .rounded-image {
-  width: 30em;
+  width: 20vw;
+  max-width: 300px;
   border-radius: 50%;
 }
 @media (orientation: portrait) {
