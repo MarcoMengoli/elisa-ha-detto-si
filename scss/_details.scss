@@ -47,6 +47,7 @@
 .squared-box {
     width: 25vw;
     height: 20vw;
+
     text-align: center;
 
     color: $color-background-lighter;
@@ -198,6 +199,33 @@
             -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
             -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
             transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+        }
+
+        @media (min-width: 1500px) {
+            max-width: 30em;
+            max-height: 20em;
+
+            .icon {
+                margin-top: 5%;
+            }
+            .title {
+                margin-top: 5%;
+            }
+            .description {
+                margin-top: 8%;
+            }
+        }
+    }
+
+    @media (min-width: 1500px) {
+        max-width: 30em;
+        max-height: 20em;
+
+        .icon {
+            margin-top: 15%;
+        }
+        .title {
+            margin-top: 12%;
         }
     }
 

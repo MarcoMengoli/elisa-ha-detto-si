@@ -2798,7 +2798,7 @@ figure figcaption {
   }
 }
 figure .rounded-image {
-  width: 80%;
+  width: 30em;
   border-radius: 50%;
 }
 @media (orientation: portrait) {
@@ -3150,6 +3150,33 @@ figure .us-sparkle {
   -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
   -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
   transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+}
+@media (min-width: 1500px) {
+  .squared-box:hover {
+    max-width: 30em;
+    max-height: 20em;
+  }
+  .squared-box:hover .icon {
+    margin-top: 5%;
+  }
+  .squared-box:hover .title {
+    margin-top: 5%;
+  }
+  .squared-box:hover .description {
+    margin-top: 8%;
+  }
+}
+@media (min-width: 1500px) {
+  .squared-box {
+    max-width: 30em;
+    max-height: 20em;
+  }
+  .squared-box .icon {
+    margin-top: 15%;
+  }
+  .squared-box .title {
+    margin-top: 12%;
+  }
 }
 @media (orientation: portrait) {
   .squared-box {
