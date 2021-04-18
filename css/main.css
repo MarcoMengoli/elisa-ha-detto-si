@@ -5,7 +5,7 @@
   left: 0;
 }
 
-.min-viewport, .adaptable-viewport, .vertical-container, .squared-box .description, .countdown .cd-element, .us-story, #header-container, .container, .full-viewport, .countdown {
+.min-viewport, .adaptable-viewport, .vertical-container, .squared-box .description, .countdown .cd-element, .us-story, #header-container, .container, .full-viewport, .parking-btn .parking-link, .countdown {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.container, .full-viewport, .countdown {
+.container, .full-viewport, .parking-btn .parking-link, .countdown {
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -3024,9 +3024,8 @@ figure .us-sparkle {
   text-align: center;
   font-family: "Allura", cursive;
   font-weight: 500;
-  color: #ffffff;
+  color: #f7af9d;
   font-size: 6em;
-  text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
   margin: 1.3em 0 0.5em 0;
 }
 @media (max-width: 900px) {
@@ -3044,7 +3043,7 @@ figure .us-sparkle {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
-  color: #ffffff;
+  color: #f7af9d;
   font-size: 1.5em;
   font-weight: 500;
   text-transform: uppercase;
@@ -3067,9 +3066,11 @@ figure .us-sparkle {
   width: 20vw;
   height: 20vw;
   text-align: center;
-  background-color: transparent;
+  background-color: #ffffff;
   color: #4b2c36;
-  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
+  -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
+  box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
   position: relative;
   display: block;
   -webkit-transition: all 0.3s ease;
@@ -3079,8 +3080,9 @@ figure .us-sparkle {
 }
 .squared-box .icon {
   font-size: 4em;
-  color: #ffffff;
+  color: #c08497;
   margin-top: 20%;
+  background-color: #ffffff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -3088,6 +3090,7 @@ figure .us-sparkle {
 }
 .squared-box .title {
   margin-top: 20%;
+  color: #c08497;
   -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
   -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
   -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -3149,6 +3152,51 @@ figure .us-sparkle {
   -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
   -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
   transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+}
+
+.parking-btn {
+  border: 1px solid #c08497;
+  border-radius: 0.5em 0.5em;
+  background-color: #ffffff;
+  margin: 0.2em 0;
+  transition: all 0.4s;
+  width: 80%;
+  padding: 0;
+  overflow: hidden;
+}
+.parking-btn .parking-link {
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #c08497;
+}
+.parking-btn .parking-link > * {
+  padding: 0.5em 0;
+}
+.parking-btn .place {
+  justify-content: flex-start;
+  padding-left: 0.5em;
+}
+.parking-btn .distance {
+  justify-content: flex-end;
+  flex-basis: 4em;
+  background-color: #c08497;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.parking-btn .distance i {
+  font-size: 1em;
+}
+.parking-btn:hover .parking-link {
+  background-color: #c08497;
+  color: #ffffff;
+}
+.parking-btn:hover .distance {
+  background-color: #ffffff;
+  color: #c08497;
 }
 
 html {

@@ -3,9 +3,8 @@
         text-align: center;
         font-family: $font-title;
         font-weight: 500;
-        color: $color-font-primary;
+        color: $color-background;
         font-size: 6em;
-        text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
         margin: 1.3em 0 0.5em 0;
 
         @media (max-width: 900px) {
@@ -21,7 +20,7 @@
         text-align: center;
         font-family: $font-countdown;
         font-weight: 300;
-        color: $color-font-primary;
+        color: $color-background;
         font-size: 1.5em;
         font-weight: 500;
         text-transform: uppercase;
@@ -43,9 +42,13 @@
     width: 20vw;
     height: 20vw;
     text-align: center;
-    background-color: transparent;
+    background-color: $color-background-lighter;
     color: $color-font-text;
-    border: 1px solid $color-background-lighter;
+    // border: 1px solid $color-font-details-title;
+
+    -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+    -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
+    box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
 
     position: relative;
     display: block;
@@ -57,8 +60,9 @@
 
     .icon {
         font-size: 4em;
-        color: $color-background-lighter;
+        color: $color-font-details-title;
         margin-top: 20%;
+        background-color: $color-background-lighter;
 
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
@@ -68,7 +72,7 @@
 
     .title {
         margin-top: 20%;
-
+        color: $color-font-details-title;
         -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -139,6 +143,60 @@
             -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
             -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
             transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+        }
+    }
+}
+
+.parking-btn {
+    border: 1px solid $color-font-details-title;
+    border-radius: 0.5em 0.5em;
+    background-color: $color-background-lighter;
+    margin: 0.2em 0;
+    transition: all 0.4s;
+    width: 80%;
+    padding: 0;
+    overflow: hidden;
+
+    .parking-link {
+        outline: none;
+        cursor: pointer;
+        @extend %flex-row-centered;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: $color-font-details-title;
+
+        & > * {
+            padding: 0.5em 0;
+        }
+    }
+
+    .place {
+        justify-content: flex-start;
+        padding-left: 0.5em;
+    }
+
+    .distance {
+        justify-content: flex-end;
+        flex-basis: 4em;
+        background-color: $color-font-details-title;
+        color: $color-background-lighter;
+        width: 100%;
+        height: 100%;
+
+        i {
+            font-size: 1em;
+        }
+    }
+
+    &:hover {
+        .parking-link {
+            background-color: $color-font-details-title;
+            color: $color-background-lighter;
+        }
+        .distance {
+            background-color: $color-background-lighter;
+            color: $color-font-details-title;
         }
     }
 }
