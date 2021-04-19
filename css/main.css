@@ -5,7 +5,7 @@
   left: 0;
 }
 
-.min-viewport, .adaptable-viewport, .vertical-container, .squared-box .description, .countdown .cd-element, .us-story, #header-container, .container, .full-viewport, .squared-box .description .parking-btn .parking-link, .countdown {
+.min-viewport, .adaptable-viewport, .vertical-container, .squared-box .description, .countdown .cd-element, .us-story, #header-container, .always-row-container, .container, .full-viewport, .squared-box .description .parking-btn .parking-link, .countdown {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.container, .full-viewport, .squared-box .description .parking-btn .parking-link, .countdown {
+.always-row-container, .container, .full-viewport, .squared-box .description .parking-btn .parking-link, .countdown {
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -3279,6 +3279,11 @@ figure .us-sparkle {
 .footer i {
   font-size: 0.7em;
 }
+@media (orientation: portrait) {
+  .footer {
+    font-size: 1.5em;
+  }
+}
 
 html {
   background-color: #f7af9d;
@@ -3323,6 +3328,10 @@ body {
 .vertical-container {
   width: 100%;
 }
+.always-row-container {
+  width: 100%;
+}
+
 .light-bg {
   background-color: #ffffff;
 }

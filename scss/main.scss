@@ -80,6 +80,11 @@ body {
     }
 }
 
+.always-row-container {
+    @extend %flex-row-centered;
+    width: 100%;
+}
+
 .light-bg {
     background-color: $color-background-lighter;
 }
