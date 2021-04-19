@@ -1,0 +1,19 @@
+.double-pulse {
+    -webkit-animation: double-pulse 2s ease-in-out infinite;
+    -moz-animation: double-pulse 2s ease-in-out infinite;
+    -o-animation: double-pulse 2s ease-in-out infinite;
+    animation: double-pulse 2s ease-in-out infinite;
+}
+
+.footer {
+    color: $color-background-lighter;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-family: $font-title;
+    align-self: flex-end;
+    text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+
+    i {
+        font-size: 0.7em;
+    }
+}
