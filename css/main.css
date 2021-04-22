@@ -3241,12 +3241,18 @@ h1 {
   max-width: 1200px;
   max-height: 1200px;
   display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(8, 50px);
+  grid-template-columns: repeat(10, 7vh);
+  grid-template-rows: repeat(8, 7vh);
   grid-gap: 2vmin;
   justify-items: center;
   align-items: center;
   margin: 4em 0 8em 0;
+}
+@media (orientation: portrait) {
+  .gallery {
+    grid-template-columns: repeat(10, 5vw);
+    grid-template-rows: repeat(8, 5vw);
+  }
 }
 .gallery.gallery-infinite .gallery-fader:nth-child(8), .gallery.gallery-infinite .gallery-fader:nth-child(10), .gallery.gallery-infinite .gallery-fader:nth-child(17), .gallery.gallery-infinite .gallery-fader:nth-child(19), .gallery.gallery-infinite .gallery-fader:nth-child(20), .gallery.gallery-infinite .gallery-fader:nth-child(21) {
   opacity: 0;

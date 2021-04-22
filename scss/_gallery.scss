@@ -6,12 +6,18 @@
     max-height: 1200px;
 
     display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(10, 7vh);
+    grid-template-rows: repeat(8, 7vh);
+
     grid-gap: 2vmin;
     justify-items: center;
     align-items: center;
     margin: 4em 0 8em 0;
+
+    @media (orientation: portrait) {
+        grid-template-columns: repeat(10, 5vw);
+        grid-template-rows: repeat(8, 5vw);
+    }
 
     &.gallery-infinite .gallery-fader {
         &:nth-child(8),
