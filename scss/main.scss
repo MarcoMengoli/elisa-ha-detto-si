@@ -33,12 +33,20 @@ body {
     height: 100vh;
     @extend %flex-row-centered;
     @extend %flex-stretched;
+
+    @media (orientation: portrait) {
+        min-height: 100vh;
+    }
 }
 
 .adaptable-viewport {
     width: 100vw;
-    min-height: 70vh;
+    min-height: 85vh;
     @extend %display-flex;
+
+    @media (orientation: portrait) {
+        min-height: 100vh;
+    }
 }
 
 .min-viewport {
@@ -57,7 +65,7 @@ body {
     @extend %flex-row-centered;
     width: 100%;
 
-    @media (max-width: 900px) {
+    @media (orientation: portrait) {
         flex-direction: column;
     }
 
@@ -115,8 +123,15 @@ h2 {
     text-align: center;
     margin: 1.3em 0 0.5em 0;
 
-    @media (orientation: portrait) {
+    @media (max-width: 1200px) {
+        font-size: 5em;
+    }
+    @media (max-width: 600px) {
         font-size: 4em;
+    }
+
+    @media (orientation: portrait) and (min-width: 900px) {
+        font-size: 9em;
     }
 }
 

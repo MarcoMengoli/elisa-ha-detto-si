@@ -2263,6 +2263,11 @@
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
+@media (max-height: 600px) {
+  .fade-in {
+    opacity: 1;
+  }
+}
 .fade-in.active {
   opacity: 1;
   -webkit-transition-duration: 0.5s;
@@ -2680,8 +2685,17 @@
   align-self: start;
   justify-self: center;
 }
-
-h1 {
+@media (orientation: portrait) {
+  #header-container {
+    align-self: center;
+  }
+}
+@media (orientation: portrait) and (min-width: 900px) {
+  #header-container img {
+    transform: scale(1.5);
+  }
+}
+#header-container h1 {
   text-align: center;
   font-family: "Allura", cursive;
   font-weight: 500;
@@ -2690,13 +2704,18 @@ h1 {
   margin: 0 auto;
   text-shadow: 0.01em 0.01em 0.03em rgba(0, 0, 0, 0.8);
 }
-@media (max-width: 900px) {
-  h1 {
+@media (orientation: portrait) {
+  #header-container h1 {
+    font-size: 8em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  #header-container h1 {
     font-size: 6em;
   }
 }
-@media (max-width: 500px) {
-  h1 {
+@media (orientation: portrait) and (max-width: 500px) {
+  #header-container h1 {
     font-size: 5em;
     margin: 0.3em 0;
   }
@@ -2714,7 +2733,7 @@ h1 {
   grid-template-columns: 2fr 10fr 15fr 10fr 2fr;
   grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .us-container {
     grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
     grid-template-rows: 1fr 3fr auto 3fr 1fr;
@@ -2731,7 +2750,7 @@ h1 {
   -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
   box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .us-middle-background {
     grid-row: 2/5;
     grid-column: 2/5;
@@ -2748,7 +2767,7 @@ h1 {
   grid-column: 3/4;
   padding: 2em 0;
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .us-story {
     grid-row: 3/4;
     grid-column: 3/4;
@@ -2766,6 +2785,26 @@ h1 {
 }
 @media (orientation: portrait) {
   .story-element-title {
+    font-size: 6em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .story-element-title {
+    font-size: 3.2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .story-element-title {
+    font-size: 2.1em;
+  }
+}
+@media (orientation: landscape) and (max-width: 1500px) {
+  .story-element-title {
+    font-size: 2.5em;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .story-element-title {
     font-size: 2.2em;
   }
 }
@@ -2775,6 +2814,16 @@ h1 {
   font-family: Cormorant, serif;
 }
 @media (orientation: portrait) {
+  .story-element-subtitle {
+    font-size: 2.5em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .story-element-subtitle {
+    font-size: 1.6em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
   .story-element-subtitle {
     font-size: 1em;
   }
@@ -2786,7 +2835,17 @@ h1 {
 }
 @media (orientation: portrait) {
   .story-element-description {
-    font-size: 0.9em;
+    font-size: 2.4em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .story-element-description {
+    font-size: 1.2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .story-element-description {
+    font-size: 0.8em;
   }
 }
 .story-element-line-separator {
@@ -2804,10 +2863,15 @@ h1 {
   z-index: 5;
   margin: 0 3em;
 }
+@media (orientation: landscape) and (max-width: 900px) {
+  .avatar {
+    margin: 0 0.5em;
+  }
+}
 .avatar-left {
   grid-column: 2/3;
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .avatar-left {
     grid-column: 3/4;
     grid-row: 2/3;
@@ -2816,7 +2880,7 @@ h1 {
 .avatar-right {
   grid-column: 4/5;
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .avatar-right {
     grid-column: 3/4;
     grid-row: 4/5;
@@ -2839,18 +2903,59 @@ h1 {
 }
 @media (orientation: portrait) {
   .avatar-figure figcaption {
-    font-size: 3em;
+    font-size: 7em;
+    margin: -0.4em 0 0.4em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .avatar-figure figcaption {
+    font-size: 5em;
+    margin: 0 0 0.3em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .avatar-figure figcaption {
+    font-size: 3.3em;
+    margin: 0 0 0.4em 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .avatar-figure figcaption {
+    font-size: 2.3em;
+    margin: 0 0 0.4em 0;
   }
 }
 .avatar-figure .rounded-image {
   width: 20vw;
-  max-width: 300px;
   border-radius: 50%;
+}
+@media (min-width: 1800px) {
+  .avatar-figure .rounded-image {
+    max-width: 300px;
+  }
 }
 @media (orientation: portrait) {
   .avatar-figure .rounded-image {
+    width: 35vw;
+    margin: 3em 0 3em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .avatar-figure .rounded-image {
+    width: 40vw;
+    margin: 3em 0 0.7em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .avatar-figure .rounded-image {
     width: 50vw;
-    margin: 3em 0 1em 0;
+    margin: 3em 0 0em 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .avatar-figure .rounded-image {
+    width: 20vw;
+    margin: 3em 0 0em 0;
   }
 }
 .avatar-figure .us-sparkle {
@@ -2871,10 +2976,27 @@ h1 {
   animation: sparkle-move 60s linear infinite;
 }
 
+.pulsing-hearts-wrapper {
+  width: 3em;
+  height: 3em;
+}
+@media (min-width: 1500px), (min-height: 1500px) {
+  .pulsing-hearts-wrapper {
+    width: 4em;
+    height: 4em;
+  }
+}
+
 .us-heart {
   position: absolute;
-  font-size: 3em;
   color: #f7af9d;
+  opacity: 0.5;
+  font-size: 3em;
+}
+@media (min-width: 1500px), (min-height: 1500px) {
+  .us-heart {
+    font-size: 4em;
+  }
 }
 
 @-webkit-keyframes sparkle-move {
@@ -2917,14 +3039,6 @@ h1 {
     background-position: -500px -1000px, -400px -400px, 300px 300px;
   }
 }
-.pulsing-hearts-wrapper {
-  width: 50px;
-  height: 50px;
-}
-.pulsing-hearts-wrapper > * {
-  opacity: 0.5;
-}
-
 .pulse {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
@@ -2953,15 +3067,25 @@ h1 {
   font-size: 4em;
   text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
 }
-@media (orientation: portrait) {
+@media (orientation: portrait) and (min-width: 1000px) {
   .date-container h2 {
-    font-size: 3em;
+    font-size: 7em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .date-container h2 {
+    font-size: 5em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .date-container h2 {
+    font-size: 3.1em;
   }
 }
 .date-container h3 {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #ffffff;
   margin: -0.2em 0 0 0;
   font-size: 1.3em;
@@ -2969,7 +3093,17 @@ h1 {
 }
 @media (orientation: portrait) {
   .date-container h3 {
-    font-size: 1.2em;
+    font-size: 3em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .date-container h3 {
+    font-size: 2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .date-container h3 {
+    font-size: 1.3em;
   }
 }
 
@@ -2980,7 +3114,19 @@ h1 {
   text-align: center;
   margin: 3em 0 2em 0;
 }
-@media (max-width: 500px) {
+@media (orientation: portrait) {
+  .countdown {
+    flex-direction: column;
+    margin: 7em 0 7em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .countdown {
+    flex-direction: column;
+    margin: 3.5em 0 3.5em 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
   .countdown {
     flex-direction: column;
     margin: 2.5em 0 4em 0;
@@ -2998,10 +3144,23 @@ h1 {
 }
 @media (orientation: portrait) {
   .countdown .cd-element {
+    font-size: 1.6em;
+    width: 20vw;
+    height: 20vw;
+    margin: 0.3em auto;
+    font-weight: 400;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .countdown .cd-element {
+    font-size: 1.3em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .countdown .cd-element {
+    font-size: 0.8em;
     width: 25vw;
     height: 25vw;
-    margin: 0.3em auto;
-    font-weight: 300;
   }
 }
 .countdown .cd-element-number {
@@ -3025,6 +3184,12 @@ h1 {
 @media (orientation: portrait) {
   .save-the-date {
     width: 70%;
+  }
+}
+@media (max-height: 600px) {
+  .save-the-date {
+    width: 40%;
+    margin: 4em 0;
   }
 }
 
@@ -3106,6 +3271,8 @@ h1 {
   width: 80%;
   padding: 0;
   overflow: hidden;
+  font-size: 0.8em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .squared-box .description .parking-btn .parking-link {
   outline: none;
@@ -3145,32 +3312,34 @@ h1 {
 .squared-box .description .parking-btn:hover .distance {
   margin-right: 0.5em;
 }
-.squared-box:hover {
-  border-color: #c08497;
+@media (hover: hover) {
+  .squared-box:hover {
+    border-color: #c08497;
+  }
+  .squared-box:hover .icon {
+    margin-top: 2%;
+  }
+  .squared-box:hover .title {
+    margin-top: 0%;
+    -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
+    -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
+    -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
+    transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
+  }
+  .squared-box:hover .description {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+    -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+    -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+    transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
+  }
 }
-.squared-box:hover .icon {
-  margin-top: 2%;
-}
-.squared-box:hover .title {
-  margin-top: 0%;
-  -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
-  -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
-  -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
-  transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
-}
-.squared-box:hover .description {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
-  -moz-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
-  -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
-  transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
-}
-@media (min-width: 1500px) {
+@media (hover: hover) and (min-width: 1500px) {
   .squared-box:hover {
     max-width: 30em;
     max-height: 20em;
@@ -3185,7 +3354,7 @@ h1 {
     margin-top: 8%;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
   .squared-box {
     max-width: 30em;
     max-height: 20em;
@@ -3197,20 +3366,38 @@ h1 {
     margin-top: 12%;
   }
 }
-@media (orientation: portrait) {
+@media (hover: none) and (pointer: coarse) {
   .squared-box {
-    width: 70vw;
-    height: 50vw;
     margin: 0.5em auto;
+    width: 30vw;
+    height: 25vw;
+    font-size: 1.8em;
   }
-  .squared-box .icon {
-    font-size: 2em;
-    margin-top: 5%;
-  }
-  .squared-box .title {
+}
+@media (hover: none) and (pointer: coarse) and (max-width: 1200px) {
+  .squared-box {
     font-size: 1em;
-    margin-top: 0%;
   }
+}
+@media (hover: none) and (pointer: coarse) and (max-width: 900px) {
+  .squared-box {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .squared-box .icon {
+    font-size: 2.7em;
+    margin-top: 0.5em;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .squared-box .title {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
   .squared-box .description {
     opacity: 1;
     transform: scale(1);
@@ -3228,10 +3415,40 @@ h1 {
     padding: 0.3em 0;
   }
 }
+@media (orientation: portrait) {
+  .squared-box {
+    width: 65vw;
+    height: 58vw;
+    font-size: 2.6em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .squared-box {
+    width: 60vw;
+    height: 45vw;
+    font-size: 1.4em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .squared-box {
+    width: 75vw;
+    height: 65vw;
+    font-size: 1em;
+  }
+}
 
 .map {
   width: 100%;
   height: 40vh;
+}
+
+.map {
+  min-height: 60vh;
+}
+@media (max-height: 600px) {
+  .map {
+    min-height: 90vh;
+  }
 }
 
 .gallery {
@@ -3591,7 +3808,17 @@ h1 {
 }
 @media (orientation: portrait) {
   .footer {
-    font-size: 1.5em;
+    font-size: 3em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .footer {
+    font-size: 2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .footer {
+    font-size: 1.2em;
   }
 }
 
@@ -3611,10 +3838,20 @@ body {
   width: 100vw;
   height: 100vh;
 }
+@media (orientation: portrait) {
+  .full-viewport {
+    min-height: 100vh;
+  }
+}
 
 .adaptable-viewport {
   width: 100vw;
-  min-height: 70vh;
+  min-height: 85vh;
+}
+@media (orientation: portrait) {
+  .adaptable-viewport {
+    min-height: 100vh;
+  }
 }
 
 .min-viewport {
@@ -3630,7 +3867,7 @@ body {
 .container {
   width: 100%;
 }
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .container {
     flex-direction: column;
   }
@@ -3671,9 +3908,19 @@ h2 {
   text-align: center;
   margin: 1.3em 0 0.5em 0;
 }
-@media (orientation: portrait) {
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 5em;
+  }
+}
+@media (max-width: 600px) {
   h2 {
     font-size: 4em;
+  }
+}
+@media (orientation: portrait) and (min-width: 900px) {
+  h2 {
+    font-size: 9em;
   }
 }
 
