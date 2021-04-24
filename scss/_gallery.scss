@@ -19,6 +19,11 @@
         grid-template-rows: repeat(8, 5vw);
     }
 
+    @media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+        grid-template-columns: repeat(10, 5vh);
+        grid-template-rows: repeat(8, 5vh);
+    }
+
     &.gallery-infinite .gallery-fader {
         &:nth-child(8),
         &:nth-child(10),

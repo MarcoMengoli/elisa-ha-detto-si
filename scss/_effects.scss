@@ -40,6 +40,10 @@
     @media (orientation: portrait) {
         background-size: auto 150%;
     }
+
+    @media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+        background-size: 150% auto;
+    }
 }
 
 .when-loaded {

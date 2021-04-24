@@ -2243,6 +2243,11 @@
     background-size: auto 150%;
   }
 }
+@media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+  .parallax {
+    background-size: 150% auto;
+  }
+}
 
 .when-loaded {
   opacity: 0;
@@ -2925,6 +2930,12 @@
     margin: 0 0 0.4em 0;
   }
 }
+@media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+  .avatar-figure figcaption {
+    font-size: 3em;
+    margin: 0 0 0.4em 0;
+  }
+}
 .avatar-figure .rounded-image {
   width: 20vw;
   border-radius: 50%;
@@ -2955,6 +2966,12 @@
 @media (orientation: landscape) and (max-width: 900px) {
   .avatar-figure .rounded-image {
     width: 20vw;
+    margin: 3em 0 0em 0;
+  }
+}
+@media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+  .avatar-figure .rounded-image {
+    width: 15vw;
     margin: 3em 0 0em 0;
   }
 }
@@ -3479,6 +3496,12 @@
   .gallery {
     grid-template-columns: repeat(10, 5vw);
     grid-template-rows: repeat(8, 5vw);
+  }
+}
+@media (orientation: landscape) and (max-aspect-ratio: 5/4) {
+  .gallery {
+    grid-template-columns: repeat(10, 5vh);
+    grid-template-rows: repeat(8, 5vh);
   }
 }
 .gallery.gallery-infinite .gallery-fader:nth-child(8), .gallery.gallery-infinite .gallery-fader:nth-child(10), .gallery.gallery-infinite .gallery-fader:nth-child(17), .gallery.gallery-infinite .gallery-fader:nth-child(19), .gallery.gallery-infinite .gallery-fader:nth-child(20), .gallery.gallery-infinite .gallery-fader:nth-child(21) {
