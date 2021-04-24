@@ -126,14 +126,9 @@
 }
 
 @for $i from 1 through 30 {
-    $url: "url('../images/gallery/#{$i}.jpg')";
-    $url2: "url('../images/gallery2/#{$i}.jpg')";
+    $url: "url('../images/gallery/#{pad-zeroes($i)}.jpg')";
 
     #gallery-img-#{pad-zeroes($i)} {
         background-image: #{$url};
-    }
-
-    #gallery2-img-#{pad-zeroes($i)} {
-        background-image: #{$url2};
     }
 }
