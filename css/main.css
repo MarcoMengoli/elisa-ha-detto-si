@@ -3064,8 +3064,7 @@
   font-weight: 500;
   color: #ffffff;
   margin: 2em 0 0 0;
-  font-size: 4em;
-  text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+  font-size: 5em;
 }
 @media (orientation: portrait) and (min-width: 1000px) {
   .date-container h2 {
@@ -3089,7 +3088,6 @@
   color: #ffffff;
   margin: -0.2em 0 0 0;
   font-size: 1.3em;
-  text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
 }
 @media (orientation: portrait) {
   .date-container h3 {
@@ -3195,7 +3193,6 @@
 
 .detail-container h2 {
   color: #ffffff;
-  text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4);
 }
 .detail-container h3 {
   color: #f7af9d;
@@ -3793,12 +3790,13 @@ body {
 }
 
 h2 {
-  font-size: 6em;
-  font-family: "Amatic SC", cursive;
+  font-size: 7em;
+  font-family: "Allura", cursive;
   color: #f7af9d;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   margin: 1em 0 0.6em 0;
+  text-shadow: 0.01em 0.01em 0.01em rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1200px) {
   h2 {
@@ -3823,6 +3821,7 @@ h3 {
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
 }
 @media (max-width: 900px) {
   h3 {

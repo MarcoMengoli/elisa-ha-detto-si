@@ -5,8 +5,7 @@
         font-weight: 500;
         color: $color-font-primary;
         margin: 2em 0 0 0;
-        font-size: 4em;
-        text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+        font-size: 5em;
 
         @media (orientation: portrait) and (min-width: 1000px) {
             font-size: 7em;
@@ -27,7 +26,6 @@
 
         margin: -0.2em 0 0 0;
         font-size: 1.3em;
-        text-shadow: 0.04em 0.04em 0.08em rgba(0, 0, 0, 0.8);
 
         @media (orientation: portrait) {
             font-size: 3em;
