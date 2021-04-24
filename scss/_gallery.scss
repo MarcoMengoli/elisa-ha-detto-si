@@ -109,18 +109,76 @@
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         transform: scale(1);
 
-        transition: transform 0.4s linear, clip-path 0.4s linear,
-            background-size 0.4s linear;
+        transition: transform 0.3s linear, clip-path 0.3s linear,
+            background-size 0.3s linear;
 
         background-position: center;
         background-repeat: no-repeat;
         background-size: 400%;
 
+        border: 0px solid white;
+
+        .capt {
+            position: absolute;
+            bottom: -2.3em;
+            font-size: 0.4em;
+            transform: scale(1);
+
+            font-family: $font-subtitles;
+            color: $color-font-text;
+            font-weight: 300;
+
+            @media (orientation: portrait) {
+                bottom: -17px;
+                font-size: 8px;
+            }
+            @media (max-width: 1200px) {
+                bottom: -12px;
+                font-size: 5px;
+            }
+            @media (max-width: 900px) {
+                bottom: -12px;
+                font-size: 4px;
+            }
+            @media (orientation: portrait) and (max-width: 900px) {
+                bottom: -12px;
+                font-size: 5px;
+            }
+            @media (max-width: 500px) {
+                bottom: -8px;
+                font-size: 3.5px;
+            }
+        }
+
         &:hover {
             z-index: 100;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(-20% -20%, 120% -20%, 120% 120%, -20% 120%);
             background-size: 100%;
-            transform: scale(4);
+            transform: scale(3.3);
+            border-width: 4px 4px 24px 4px;
+
+            -webkit-box-shadow: 0 1px 10px 0 rgb(0 0 0 / 30%);
+            -moz-box-shadow: 0 1px 10px 0 rgb(0 0 0 / 0.3);
+            box-shadow: 0 1px 10px 0 rgb(0 0 0 / 30%);
+            // outline: 2px solid rgb(207, 207, 207);
+
+            @media (orientation: portrait) {
+                transform: scale(3.2);
+
+                border-width: 4px 4px 24px 4px;
+            }
+            @media (max-width: 900px) {
+                transform: scale(3);
+                border-width: 3px 3px 18px 3px;
+            }
+            @media (orientation: portrait) and (max-width: 500px) {
+                transform: scale(3);
+                border-width: 2px 2px 12px 2px;
+            }
+            @media (min-width: 1900px) {
+                transform: scale(4);
+                border-width: 5px 5px 1.5em 5px;
+            }
         }
     }
 }
