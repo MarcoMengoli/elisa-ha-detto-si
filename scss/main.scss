@@ -45,7 +45,7 @@ body {
     @extend %display-flex;
 
     @media (orientation: portrait) {
-        min-height: 100vh;
+        min-height: 80vh;
     }
 }
 

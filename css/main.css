@@ -3546,7 +3546,7 @@
   height: 100%;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   transform: scale(1);
-  transition: transform 0.3s linear, clip-path 0.3s linear, background-size 0.3s linear;
+  transition: transform 0.4s linear, clip-path 0.4s linear, background-size 0.4s linear;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 400%;
@@ -3569,8 +3569,8 @@
 }
 @media (max-width: 1200px) {
   .gallery .gallery-img .capt {
-    bottom: -12px;
-    font-size: 5px;
+    bottom: -13px;
+    font-size: 7px;
   }
 }
 @media (max-width: 900px) {
@@ -3588,7 +3588,7 @@
 @media (max-width: 500px) {
   .gallery .gallery-img .capt {
     bottom: -8px;
-    font-size: 3.5px;
+    font-size: 3.3px;
   }
 }
 .gallery .gallery-img:hover {
@@ -3605,6 +3605,12 @@
   .gallery .gallery-img:hover {
     transform: scale(3.2);
     border-width: 4px 4px 24px 4px;
+  }
+}
+@media (max-width: 1200px) {
+  .gallery .gallery-img:hover {
+    transform: scale(3);
+    border-width: 3px 3px 18px 3px;
   }
 }
 @media (max-width: 900px) {
@@ -3808,7 +3814,7 @@ body {
 }
 @media (orientation: portrait) {
   .adaptable-viewport {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 }
 
