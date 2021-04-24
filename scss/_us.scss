@@ -76,7 +76,7 @@
     &-subtitle {
         font-size: 1.2em;
         color: $color-font-details-title;
-        font-family: Cormorant, serif;
+        font-family: $font-subtitles;
 
         @media (orientation: portrait) {
             font-size: 2.5em;
@@ -91,7 +91,7 @@
 
     &-description {
         font-size: 1em;
-        font-family: Cormorant, serif;
+        font-family: $font-subtitles;
         padding-top: 1em;
 
         @media (orientation: portrait) {

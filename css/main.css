@@ -2811,7 +2811,7 @@
 .story-element-subtitle {
   font-size: 1.2em;
   color: #c08497;
-  font-family: Cormorant, serif;
+  font-family: "Handlee", cursive;
 }
 @media (orientation: portrait) {
   .story-element-subtitle {
@@ -2830,7 +2830,7 @@
 }
 .story-element-description {
   font-size: 1em;
-  font-family: Cormorant, serif;
+  font-family: "Handlee", cursive;
   padding-top: 1em;
 }
 @media (orientation: portrait) {
@@ -3195,7 +3195,7 @@
 
 .detail-container h2 {
   color: #ffffff;
-  text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+  text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4);
 }
 .detail-container h3 {
   color: #f7af9d;
@@ -3205,8 +3205,8 @@
 }
 
 .squared-box {
-  width: 25vw;
-  height: 20vw;
+  width: 30vw;
+  height: 25vw;
   text-align: center;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
@@ -3215,28 +3215,107 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media (min-width: 1500px) {
+  .squared-box {
+    max-width: 30em;
+    max-height: 20em;
+  }
+}
+@media (max-width: 1200px) {
+  .squared-box {
+    font-size: 1em;
+    width: 20em;
+    height: 20em;
+  }
+}
+@media (max-width: 1000px) {
+  .squared-box {
+    width: 28vw;
+    height: 30vw;
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 900px) {
+  .squared-box {
+    width: 30vw;
+    height: 30vw;
+    font-size: 0.9em;
+  }
+}
+@media (orientation: portrait) {
+  .squared-box {
+    width: 65vw;
+    height: 58vw;
+    font-size: 2.6em;
+    margin: 0.5em auto;
+  }
+}
+@media (orientation: portrait) and (max-width: 1200px) {
+  .squared-box {
+    width: 65vw;
+    height: 55vw;
+    font-size: 2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 900px) {
+  .squared-box {
+    width: 55vw;
+    height: 45vw;
+    font-size: 1.2em;
+  }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+  .squared-box {
+    width: 60vw;
+    height: 50vw;
+    font-size: 1em;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .squared-box {
+    width: 75vw;
+    height: 65vw;
+    font-size: 1em;
+  }
+}
 .squared-box .icon {
   font-size: 3em;
-  margin-top: 20%;
+  margin: 1.2em 0 0 0;
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media (min-width: 1500px) {
+  .squared-box .icon {
+    margin-top: 2em;
+  }
+}
+@media (orientation: landscape) and (max-width: 1200px) {
+  .squared-box .icon {
+    margin-top: 2em;
+  }
+}
 .squared-box .title {
   color: #ffffff;
-  margin-top: 10%;
+  margin: 1.8em 0 1em 0;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 500;
   -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
   -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
   -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
   transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
 }
+@media (min-width: 1500px) {
+  .squared-box .title {
+    margin-top: 2em;
+  }
+}
 .squared-box .description {
   width: 100%;
   opacity: 0;
+  padding-top: 0.5em;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
@@ -3248,8 +3327,8 @@
   transform: scale(0);
 }
 .squared-box .description .desc-line {
-  font-size: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  font-family: "Handlee", cursive;
   padding-top: 1em;
 }
 @media (max-width: 900px) {
@@ -3262,6 +3341,13 @@
     font-size: 0.8em;
   }
 }
+@media (orientation: portrait) {
+  .squared-box .description .desc-line {
+    margin-top: 0.1em;
+    font-size: 1.2em;
+    padding-top: 0.2em;
+  }
+}
 .squared-box .description .parking-btn {
   border: 0px solid #c08497;
   border-radius: 0.5em 0.5em;
@@ -3271,8 +3357,19 @@
   width: 80%;
   padding: 0;
   overflow: hidden;
-  font-size: 0.8em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1em;
+  font-family: "Handlee", cursive;
+}
+@media (max-width: 500px) {
+  .squared-box .description .parking-btn {
+    margin: 0.2em 0;
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 900px) {
+  .squared-box .description .parking-btn {
+    font-size: 0.8em;
+  }
 }
 .squared-box .description .parking-btn .parking-link {
   outline: none;
@@ -3317,10 +3414,10 @@
     border-color: #c08497;
   }
   .squared-box:hover .icon {
-    margin-top: 2%;
+    margin-top: 0.7em;
   }
   .squared-box:hover .title {
-    margin-top: 0%;
+    margin: 0.3em 0;
     -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
     -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
     -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -3339,101 +3436,16 @@
     transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
   }
 }
-@media (hover: hover) and (min-width: 1500px) {
-  .squared-box:hover {
-    max-width: 30em;
-    max-height: 20em;
-  }
-  .squared-box:hover .icon {
-    margin-top: 5%;
-  }
-  .squared-box:hover .title {
-    margin-top: 5%;
-  }
-  .squared-box:hover .description {
-    margin-top: 8%;
-  }
-}
-@media (min-width: 1800px) {
-  .squared-box {
-    max-width: 30em;
-    max-height: 20em;
-  }
-  .squared-box .icon {
-    margin-top: 15%;
-  }
-  .squared-box .title {
-    margin-top: 12%;
-  }
-}
-@media (hover: none) and (pointer: coarse) {
-  .squared-box {
-    margin: 0.5em auto;
-    width: 30vw;
-    height: 25vw;
-    font-size: 1.8em;
-  }
-}
-@media (hover: none) and (pointer: coarse) and (max-width: 1200px) {
-  .squared-box {
-    font-size: 1em;
-  }
-}
-@media (hover: none) and (pointer: coarse) and (max-width: 900px) {
-  .squared-box {
-    width: 30vw;
-    height: 30vw;
-  }
-}
 @media (hover: none) and (pointer: coarse) {
   .squared-box .icon {
-    font-size: 2.7em;
-    margin-top: 0.5em;
+    margin: 0.2em 0 0 0;
   }
-}
-@media (hover: none) and (pointer: coarse) {
   .squared-box .title {
-    font-size: 1.5em;
-    margin-top: 0.5em;
+    margin: 0.2em 0 0.5em 0;
   }
-}
-@media (hover: none) and (pointer: coarse) {
   .squared-box .description {
     opacity: 1;
     transform: scale(1);
-  }
-  .squared-box .description .desc-line {
-    margin-top: 0.2em;
-    font-size: 0.8em;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    padding-top: 0.6em;
-  }
-  .squared-box .description .parking-btn {
-    margin: 0.2em 0;
-  }
-  .squared-box .description .parking-btn .parking-link > * {
-    padding: 0.3em 0;
-  }
-}
-@media (orientation: portrait) {
-  .squared-box {
-    width: 65vw;
-    height: 58vw;
-    font-size: 2.6em;
-  }
-}
-@media (orientation: portrait) and (max-width: 900px) {
-  .squared-box {
-    width: 60vw;
-    height: 45vw;
-    font-size: 1.4em;
-  }
-}
-@media (orientation: portrait) and (max-width: 500px) {
-  .squared-box {
-    width: 75vw;
-    height: 65vw;
-    font-size: 1em;
   }
 }
 
@@ -3669,36 +3681,36 @@
 }
 
 .double-pulse {
-  -webkit-animation: double-pulse 2s ease-in-out infinite;
-  -moz-animation: double-pulse 2s ease-in-out infinite;
-  -o-animation: double-pulse 2s ease-in-out infinite;
-  animation: double-pulse 2s ease-in-out infinite;
+  -webkit-animation: double-pulse 1.5s ease-in-out infinite;
+  -moz-animation: double-pulse 1.5s ease-in-out infinite;
+  -o-animation: double-pulse 1.5s ease-in-out infinite;
+  animation: double-pulse 1.5s ease-in-out infinite;
 }
 
 .footer {
   color: #ffffff;
   margin-bottom: 0.5em;
-  font-size: 2em;
-  font-family: "Allura", cursive;
+  font-size: 1.5em;
+  font-family: "Handlee", cursive;
   align-self: flex-end;
-  text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+  text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4);
 }
 .footer i {
   font-size: 0.7em;
 }
 @media (orientation: portrait) {
   .footer {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 @media (orientation: portrait) and (max-width: 900px) {
   .footer {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 @media (orientation: portrait) and (max-width: 500px) {
   .footer {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -3782,11 +3794,11 @@ body {
 
 h2 {
   font-size: 6em;
-  font-family: "Allura", cursive;
+  font-family: "Amatic SC", cursive;
   color: #f7af9d;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
-  margin: 1.3em 0 0.5em 0;
+  margin: 1em 0 0.6em 0;
 }
 @media (max-width: 1200px) {
   h2 {

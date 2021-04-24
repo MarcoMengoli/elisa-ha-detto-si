@@ -14,7 +14,7 @@
 .detail-container {
     h2 {
         color: $color-font-primary;
-        text-shadow: 0.03em 0.03em 0.07em rgba(0, 0, 0, 0.6);
+        text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4);
     }
 
     h3 {
@@ -27,8 +27,8 @@
 }
 
 .squared-box {
-    width: 25vw;
-    height: 20vw;
+    width: 30vw;
+    height: 25vw;
 
     text-align: center;
 
@@ -40,26 +40,85 @@
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
+    @media (min-width: 1500px) {
+        max-width: 30em;
+        max-height: 20em;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 1em;
+        width: 20em;
+        height: 20em;
+    }
+    @media (max-width: 1000px) {
+        width: 28vw;
+        height: 30vw;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 900px) {
+        width: 30vw;
+        height: 30vw;
+        font-size: 0.9em;
+    }
+    @media (orientation: portrait) {
+        width: 65vw;
+        height: 58vw;
+        font-size: 2.6em;
+        margin: 0.5em auto;
+    }
+    @media (orientation: portrait) and (max-width: 1200px) {
+        width: 65vw;
+        height: 55vw;
+        font-size: 2em;
+    }
+    @media (orientation: portrait) and (max-width: 900px) {
+        width: 55vw;
+        height: 45vw;
+        font-size: 1.2em;
+    }
+    @media (orientation: portrait) and (max-width: 700px) {
+        width: 60vw;
+        height: 50vw;
+        font-size: 1em;
+    }
+    @media (orientation: portrait) and (max-width: 500px) {
+        width: 75vw;
+        height: 65vw;
+        font-size: 1em;
+    }
+
     .icon {
         font-size: 3em;
-        margin-top: 20%;
+        margin: 1.2em 0 0 0;
 
         color: $color-background-lighter;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
+
+        @media (min-width: 1500px) {
+            margin-top: 2em;
+        }
+        @media (orientation: landscape) and (max-width: 1200px) {
+            margin-top: 2em;
+        }
     }
 
     .title {
         color: $color-background-lighter;
-        margin-top: 10%;
+        margin: 1.8em 0 1em 0;
         font-size: 1.5em;
-        font-weight: 400;
+        font-weight: 500;
         -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         -o-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
         transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
+
+        @media (min-width: 1500px) {
+            margin-top: 2em;
+        }
     }
 
     .description {
@@ -67,6 +126,8 @@
 
         width: 100%;
         opacity: 0;
+
+        padding-top: 0.5em;
 
         -webkit-transition: all 0.6s ease;
         -moz-transition: all 0.6s ease;
@@ -80,15 +141,22 @@
         transform: scale(0);
 
         .desc-line {
-            font-size: 1em;
-            font-family: $font-countdown;
+            font-size: 1.2em;
+            font-family: $font-subtitles;
             padding-top: 1em;
 
             @media (max-width: 900px) {
                 font-size: 0.9em;
             }
+
             @media (max-width: 500px) {
                 font-size: 0.8em;
+            }
+
+            @media (orientation: portrait) {
+                margin-top: 0.1em;
+                font-size: 1.2em;
+                padding-top: 0.2em;
             }
         }
 
@@ -102,8 +170,16 @@
             padding: 0;
             overflow: hidden;
 
-            font-size: 0.8em;
-            font-family: $font-countdown;
+            font-size: 1em;
+            font-family: $font-subtitles;
+
+            @media (max-width: 500px) {
+                margin: 0.2em 0;
+                font-size: 0.9em;
+            }
+            @media (max-width: 900px) {
+                font-size: 0.8em;
+            }
 
             .parking-link {
                 outline: none;
@@ -154,16 +230,17 @@
             }
         }
     }
+
     @media (hover: hover) {
         &:hover {
             border-color: $color-font-details-title;
 
             .icon {
-                margin-top: 2%;
+                margin-top: 0.7em;
             }
 
             .title {
-                margin-top: 0%;
+                margin: 0.3em 0;
 
                 -webkit-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
                 -moz-transition: all 0.6s cubic-bezier(0.5, -1, 0.5, 2);
@@ -185,99 +262,22 @@
                 -o-transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
                 transition: all 0.6s cubic-bezier(0.7, -0.55, 0.25, 1.5);
             }
-
-            @media (min-width: 1500px) {
-                max-width: 30em;
-                max-height: 20em;
-
-                .icon {
-                    margin-top: 5%;
-                }
-                .title {
-                    margin-top: 5%;
-                }
-                .description {
-                    margin-top: 8%;
-                }
-            }
-        }
-    }
-
-    @media (min-width: 1800px) {
-        max-width: 30em;
-        max-height: 20em;
-
-        .icon {
-            margin-top: 15%;
-        }
-        .title {
-            margin-top: 12%;
         }
     }
 
     @media (hover: none) and (pointer: coarse) {
-        margin: 0.5em auto;
-        width: 30vw;
-        height: 25vw;
-
-        font-size: 1.8em;
-
-        @media (max-width: 1200px) {
-            font-size: 1em;
-        }
-
-        @media (max-width: 900px) {
-            width: 30vw;
-            height: 30vw;
-        }
-
         .icon {
-            font-size: 2.7em;
-            margin-top: 0.5em;
+            margin: 0.2em 0 0 0;
         }
 
         .title {
-            font-size: 1.5em;
-            margin-top: 0.5em;
+            margin: 0.2em 0 0.5em 0;
         }
 
         .description {
             opacity: 1;
             transform: scale(1);
-
-            .desc-line {
-                margin-top: 0.2em;
-                font-size: 0.8em;
-                font-family: $font-countdown;
-                padding-top: 0.6em;
-            }
-
-            .parking-btn {
-                margin: 0.2em 0;
-
-                .parking-link > * {
-                    padding: 0.3em 0;
-                }
-            }
         }
-    }
-
-    @media (orientation: portrait) {
-        width: 65vw;
-        height: 58vw;
-        font-size: 2.6em;
-    }
-
-    @media (orientation: portrait) and (max-width: 900px) {
-        width: 60vw;
-        height: 45vw;
-        font-size: 1.4em;
-    }
-    @media (orientation: portrait) and (max-width: 500px) {
-        width: 75vw;
-        height: 65vw;
-
-        font-size: 1em;
     }
 }
 
