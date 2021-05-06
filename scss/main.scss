@@ -2,11 +2,13 @@
 @import "effects";
 @import "backgrounds";
 @import "loader";
+@import "snackbar";
 @import "header";
 @import "us";
 @import "date";
 @import "details";
 @import "maps";
+@import "rsvp-gift";
 @import "gallery";
 @import "footer";
 
@@ -39,7 +41,7 @@ body {
     }
 }
 
-.adaptable-viewport {
+.high-min-height-viewport {
     width: 100vw;
     min-height: 85vh;
     @extend %display-flex;
@@ -49,8 +51,14 @@ body {
     }
 }
 
-.min-viewport {
+.low-min-height-viewport {
     width: 100vw;
+    @extend %display-flex;
+}
+
+.mid-min-height-viewport {
+    width: 100vw;
+    min-height: 33vh;
     @extend %display-flex;
 }
 
@@ -134,6 +142,12 @@ h2 {
     @media (orientation: portrait) and (min-width: 900px) {
         font-size: 9em;
     }
+}
+
+.light-bg h2,
+.dark-bg h2,
+.soft-bg h2 {
+    text-shadow: 0 0 0 white;
 }
 
 h3 {

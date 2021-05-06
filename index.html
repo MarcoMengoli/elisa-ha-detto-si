@@ -44,11 +44,13 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+        <script src="js/clipboard.js"></script>
         <script src="js/countdown.js"></script>
         <script src="js/effects.js"></script>
         <title>Elisa ha detto si</title>
     </head>
     <body>
+        <div id="snackbar"></div>
         <div id="loader">
             <div class="loader-wrapper">
                 <i class="fas fa-heart loader-heart delay-p00"></i>
@@ -89,7 +91,7 @@
                 </video>
             </div>
         </section>
-        <section class="adaptable-viewport">
+        <section class="high-min-height-viewport">
             <div class="container light-bg">
                 <div class="us-container">
                     <div class="us-middle-background"></div>
@@ -173,7 +175,7 @@
                 </div>
             </div>
         </section>
-        <section class="adaptable-viewport">
+        <section class="high-min-height-viewport">
             <div
                 class="vertical-container date-container background-image-1 parallax"
             >
@@ -221,7 +223,7 @@
                 </div>
             </div>
         </section>
-        <section class="adaptable-viewport">
+        <section class="high-min-height-viewport">
             <div class="container light-bg">
                 <img
                     src="images/save-the-date.png"
@@ -230,7 +232,7 @@
                 />
             </div>
         </section>
-        <section class="adaptable-viewport">
+        <section class="high-min-height-viewport">
             <div
                 class="vertical-container spaced detail-container background-image-3 parallax"
             >
@@ -322,7 +324,7 @@
                 </div>
             </div>
         </section>
-        <section class="min-viewport light-bg">
+        <section class="low-min-height-viewport light-bg">
             <div class="container fade-in delay-p03">
                 <iframe
                     class="map"
@@ -333,7 +335,7 @@
                 ></iframe>
             </div>
         </section>
-        <section class="adaptable-viewport">
+        <section class="high-min-height-viewport">
             <div
                 class="vertical-container spaced detail-container background-image-4 parallax"
             >
@@ -361,7 +363,7 @@
                 </div>
             </div>
         </section>
-        <section class="min-viewport light-bg">
+        <section class="low-min-height-viewport light-bg">
             <div class="container fade-in delay-p03">
                 <iframe
                     class="map"
@@ -372,7 +374,62 @@
                 ></iframe>
             </div>
         </section>
-        <section class="adaptable-viewport light-bg">
+        <section class="mid-min-height-viewport light-bg">
+            <div class="vertical-container rsvp fade-in delay-p03">
+                <h2 class="fade-in delay-p02">RSVP</h2>
+                <p class="fade-in delay-p04">
+                    &Egrave; gradita gentile conferma entro Lunedì 21 Giugno
+                    2021
+                </p>
+            </div>
+        </section>
+        <section class="mid-min-height-viewport dark-bg">
+            <div class="vertical-container gift fade-in delay-p03">
+                <h2 class="fade-in delay-p02">Luna di miele</h2>
+                <div class="gift-text">
+                    <p class="fade-in delay-p04">Riusciremo a partire? &#129335</p>
+                    <p class="fade-in delay-p06">
+                        Se desideraste contribuire alla realizzazione del nostro
+                        viaggio di nozze potete accendere un cerino e/o:
+                    </p>
+                    <div class="copy fade-in delay-p08">
+                        <label for="iban">IBAN: </label>
+                        <input
+                            id="iban"
+                            type="text"
+                            value="IT61M0846221003000005037665"
+                            readonly
+                        />
+                        <button
+                            class="copy-btn"
+                            onclick="copyToClipboard('iban')"
+                        >
+                            <i class="material-icons content_copy">
+                                content_copy </i
+                            >copia
+                        </button>
+                    </div>
+                    <div class="copy fade-in delay-p10">
+                        <label for="beneficiary">Intestatario: </label>
+                        <input
+                            id="beneficiary"
+                            type="text"
+                            value="Bruzzi-Mengoli"
+                            readonly
+                        />
+                        <button
+                            class="copy-btn"
+                            onclick="copyToClipboard('beneficiary')"
+                        >
+                            <i class="material-icons content_copy">
+                                content_copy </i
+                            >copia
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="high-min-height-viewport light-bg">
             <div class="vertical-container spaced">
                 <h2 class="fade-in delay-p02">Gallery</h2>
                 <div class="gallery gallery-infinitesa">
@@ -492,7 +549,7 @@
                 </div>
             </div>
         </section>
-        <section class="adaptable-viewport light-bg">
+        <section class="high-min-height-viewport light-bg">
             <div class="always-row-container background-image-5 parallax">
                 <span class="footer">
                     Realizzato con

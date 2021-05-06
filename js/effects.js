@@ -51,3 +51,10 @@ function setFadeOnScroll(value) {
         },
     });
 }
+
+function showSnackbar(value) {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  x.innerHTML = value;
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+}

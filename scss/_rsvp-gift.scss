@@ -1,0 +1,75 @@
+.rsvp {
+    h2 {
+        padding: 0;
+        margin: 0.1em 0;
+    }
+
+    p {
+        font-family: $font-subtitles;
+        color: $color-font-text;
+        font-size: 1.7em;
+        padding: 0;
+        margin: 0.3em 0;
+    }
+}
+
+.gift {
+    h2 {
+        color: $color-font-primary;
+        padding: 0;
+        margin: 0.1em 0;
+    }
+
+    .gift-text {
+        margin: 0.3em 0;
+        text-align: center;
+    }
+
+    .copy {
+        margin: 1.5em 0;
+        @extend %flex-row-centered;
+    }
+
+    p,
+    label,
+    input,
+    .copy-btn {
+        color: $color-font-primary;
+        font-family: $font-subtitles;
+        font-size: 1.7em;
+        padding: 0;
+        margin: 0.3em 0;
+    }
+
+    input,
+    input:focus,
+    input:focus-visible {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    .copy-btn {
+        font-size: 1em;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 8px;
+        border: 2px solid $color-font-primary;
+        color: $color-font-primary;
+        background-color: transparent;
+        padding: 0.15em 0.3em;
+        margin-left: 2em;
+
+        i {
+            font-size: 1.3em;
+            vertical-align: text-top;
+        }
+
+        &:hover {
+            border: 2px solid $color-background;
+            color: $color-background;
+            background-color: $color-font-primary;
+        }
+    }
+}
