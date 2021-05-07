@@ -18,6 +18,22 @@
     -webkit-box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
     -moz-box-shadow: 0 1px 10px 0 rgba(211, 222, 227, 0.7);
     box-shadow: 0 1px 10px 0 rgb(211 222 227 / 70%);
+
+    @media (min-width: 2500px) {
+        left: 48%;
+    }
+    @media (max-width: 1200px) {
+        left: 43%;
+    }
+    @media (max-width: 900px) {
+        left: 40%;
+    }
+    @media (max-width: 500px) {
+        left: 26%;
+    }
+    @media (max-width: 300px) {
+        left: 15%;
+    }
 }
 
 #snackbar.show {
