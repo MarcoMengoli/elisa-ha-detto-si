@@ -34,3 +34,8 @@
     @extend %background-image-full-width;
     background-image: url("../images/background-6.jpg");
 }
+
+.background-image-7 {
+    @extend %background-image-full-width;
+    background-image: url("../images/background-7.jpg");
+}

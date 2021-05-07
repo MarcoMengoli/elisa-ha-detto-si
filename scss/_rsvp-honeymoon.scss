@@ -1,5 +1,11 @@
+.rsvp,
+.honeymoon {
+    margin: 5em 0;
+}
+
 .rsvp {
     h2 {
+        font-size: 5em;
         padding: 0;
         margin: 0.1em 0;
     }
@@ -13,20 +19,20 @@
     }
 }
 
-.gift {
+.honeymoon {
     h2 {
         color: $color-font-primary;
         padding: 0;
         margin: 0.1em 0;
     }
 
-    .gift-text {
+    .honeymoon-text {
         margin: 0.3em 0;
         text-align: center;
     }
 
     .copy {
-        margin: 1.5em 0;
+        margin: 0;
         @extend %flex-row-centered;
     }
 
@@ -37,8 +43,10 @@
         color: $color-font-primary;
         font-family: $font-subtitles;
         font-size: 1.7em;
+
+        text-shadow: 0.03em 0.03em 0.03em rgb(0 0 0 / 70%);
         padding: 0;
-        margin: 0.3em 0;
+        margin: 0.3em 0.5em 0.3em 0;
     }
 
     input,
@@ -54,22 +62,31 @@
         text-align: center;
         text-decoration: none;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 50%;
         border: 2px solid $color-font-primary;
+
         color: $color-font-primary;
         background-color: transparent;
-        padding: 0.15em 0.3em;
-        margin-left: 2em;
+        padding: 0.4em;
+        margin-left: 0.3em;
+
+        -webkit-box-shadow: 0 1px 20px 0 rgb(100 100 100 / 20%);
+        -moz-box-shadow: 0 1px 20px 0 rgba(100, 100, 100, 0.2);
+        box-shadow: 0 1px 20px 0 rgb(100 100 100 / 20%);
 
         i {
             font-size: 1.3em;
-            vertical-align: text-top;
+            vertical-align: sub;
+            text-align: center;
         }
 
         &:hover {
-            border: 2px solid $color-background;
-            color: $color-background;
+            color: transparent;
+            mix-blend-mode: screen;
             background-color: $color-font-primary;
+            -webkit-box-shadow: 0 1px 10px 0 rgb(220 220 220 / 70%);
+            -moz-box-shadow: 0 1px 10px 0 rgba(220, 220, 220, 0.7);
+            box-shadow: 0 1px 10px 0 rgb(220 220 220 / 70%);
         }
     }
 }
