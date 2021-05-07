@@ -14,7 +14,7 @@
             href="https://fonts.googleapis.com/css2?family=Allura&family=Amatic+SC:wght@400;700&family=Handlee&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/main.css?v=1.12" />
+        <link rel="stylesheet" href="css/main.css?v=1.19" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -391,17 +391,20 @@
                     <p class="fade-in delay-p04">Riusciremo a partire? &#129335</p>
                     <p class="fade-in delay-p06">
                         Se desideraste contribuire alla realizzazione del nostro
-                        viaggio di nozze potete accendere un cerino e/o:
+                        viaggio di nozze potete accendere un cerino e/o
                     </p>
                     <div class="copy fade-in delay-p08">
-                        <p for="iban">IBAN: </p>
-                        <input
-                            id="iban"
-                            type="text"
-                            value="IT61M0846221003000005037665"
-                            size="37"
-                            readonly
-                        />
+                        <p>IBAN: IT61M0846221003000005037665</p>
+                        <div class="hidden-area">
+                            <input
+                                id="iban"
+                                class="copyable-input"
+                                type="text"
+                                value="IT61M0846221003000005037665"
+                                size="1"
+                                readonly
+                            /> 
+                        </div>
                         <button
                             class="copy-btn"
                             onclick="copyToClipboard('iban')"
@@ -412,14 +415,17 @@
                         </button>
                     </div>
                     <div class="copy fade-in delay-p10">
-                        <p for="beneficiary">Intestatario: </p>
-                        <input
-                            id="beneficiary"
-                            type="text"
-                            value="Bruzzi-Mengoli"
-                            size="14"
-                            readonly
-                        />
+                        <p>Intestatario: Bruzzi-Mengoli</p>
+                        <div class="hidden-area">
+                            <input
+                                    id="beneficiary"
+                                    class="copyable-input"
+                                    type="text"
+                                    value="Bruzzi-Mengoli"
+                                    size="1"
+                                    readonly
+                            />  
+                        </div>
                         <button
                             class="copy-btn"
                             onclick="copyToClipboard('beneficiary')"
@@ -428,7 +434,7 @@
                                 content_copy </i
                             >
                         </button>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>

@@ -3635,6 +3635,23 @@
   }
 }
 
+.hidden-area {
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+}
+
+.copyable-input,
+.copyable-input:focus,
+.copyable-input:focus-visible {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+}
+
 .rsvp,
 .honeymoon {
   margin: 5em 0;
@@ -3730,6 +3747,7 @@
 .honeymoon input,
 .honeymoon .copy-btn {
     font-size: 2em;
+    align-self: flex-end;
   }
 }
 @media (orientation: portrait) {
@@ -3753,15 +3771,8 @@
 .honeymoon label,
 .honeymoon input,
 .honeymoon .copy-btn {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
-}
-.honeymoon input,
-.honeymoon input:focus,
-.honeymoon input:focus-visible {
-  outline: none;
-  border: none;
-  background-color: transparent;
 }
 .honeymoon .copy-btn {
   text-align: center;
@@ -3795,7 +3806,6 @@
 }
 @media (max-width: 500px) {
   .honeymoon .copy-btn {
-    font-size: 0.7em;
     border-width: 1.5px;
   }
 }
